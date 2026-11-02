@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bhutan Global Mart | Wholesale International Products Direct from Alibaba, AliExpress & Amazon</title>
-  <meta name="description" content="Shop international products at direct wholesale prices with doorstep delivery in Bhutan. Bulk orders, MOQ support, smart AI shopping assistant & farm brokerage.">
+  <title>Bhutan Global Mart | Wholesale Direct from Alibaba, AliExpress &amp; Amazon</title>
+  <meta name="description" content="Shop international products at wholesale prices direct to Bhutan. Interactive AI Shopping Assistant, bulk orders, product reviews, and Bhutan farm brokerage.">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- TOP ANNOUNCEMENT BAR -->
+  <!-- TOP BAR -->
   <header class="mart-top-bar">
     <div class="container">
-      <div class="mart-sourcing-tags">
+      <div class="sourcing-partners-text">
         <span>Global Products &nbsp;|&nbsp; Wholesale Prices &nbsp;|&nbsp; Trusted Sourcing:</span>
-        <div class="sourcing-source-links">
+        <div class="sourcing-partner-links">
           <a href="https://www.alibaba.com" target="_blank" rel="noopener">Alibaba</a>
           <span>|</span>
           <a href="https://www.aliexpress.com" target="_blank" rel="noopener">AliExpress</a>
@@ -26,193 +26,154 @@
         </div>
       </div>
 
-      <div class="mart-top-controls">
-        <select class="currency-select" id="currencySelector" aria-label="Select Currency">
+      <div class="top-bar-right-controls">
+        <select class="currency-select-box" id="currencySelector" aria-label="Currency Selector">
           <option value="USD">🇺🇸 USD ($)</option>
           <option value="BTN">🇧🇹 BTN (Nu.)</option>
           <option value="INR">🇮🇳 INR (₹)</option>
         </select>
 
-        <select class="lang-select" aria-label="Select Language">
-          <option value="en">English</option>
-          <option value="dz">Dzongkha (རྫོང་ཁ)</option>
+        <select class="lang-select-box" aria-label="Language Selector">
+          <option>English</option>
+          <option>Dzongkha</option>
         </select>
 
-        <div class="user-quick-links">
-          <button type="button" class="user-quick-btn" onclick="alert('Welcome to Bhutan Global Mart Account Portal. Log in with your Bhutan Phone or Email.')">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-            <span>My Account</span>
+        <div class="user-nav-links">
+          <button type="button" class="user-nav-item" onclick="alert('Account login portal')">
+            <span>👤 My Account</span>
           </button>
-          
-          <button type="button" class="user-quick-btn" id="wishlistTrigger">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-            <span>Wishlist</span>
-            <span class="badge-count" id="wishlistCountBadge">3</span>
+          <button type="button" class="user-nav-item" id="wishlistTrigger">
+            <span>🤍 Wishlist</span>
+            <span class="counter-badge" id="wishlistCountBadge">0</span>
           </button>
-
-          <button type="button" class="user-quick-btn" id="cartTrigger">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-            <span>Cart</span>
-            <span class="badge-count" id="cartCountBadge">1</span>
+          <button type="button" class="user-nav-item" id="cartTrigger">
+            <span>🛒 Cart</span>
+            <span class="counter-badge" id="cartCountBadge">1</span>
           </button>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- MAIN HEADER -->
-  <nav class="mart-header" aria-label="Main Store Navigation">
-    <div class="container">
-      <div class="mart-header-wrap">
-        <!-- Logo -->
-        <a href="index.html" class="mart-logo">
-          <svg width="44" height="42" viewBox="0 0 60 55" fill="none">
-            <!-- Traditional Dzong Roofs & Mountain silhouette -->
-            <polygon points="5,48 30,12 55,48" fill="#0284c7"/>
-            <polygon points="12,32 30,8 48,32" fill="#f97316"/>
-            <!-- Stupa spire -->
-            <rect x="28" y="2" width="4" height="10" fill="#facc15"/>
-            <circle cx="30" cy="2" r="3" fill="#facc15"/>
-            <!-- Tier roofs -->
-            <line x1="8" y1="36" x2="52" y2="36" stroke="#ffffff" stroke-width="3"/>
-            <line x1="16" y1="24" x2="44" y2="24" stroke="#ffffff" stroke-width="3"/>
-          </svg>
-          <div class="mart-logo-text">
-            <span class="mart-brand-title">BHUTAN <span>GLOBAL MART</span></span>
-            <span class="mart-brand-sub">From Global Markets to Your Doorstep</span>
-          </div>
-        </a>
+  <!-- MAIN NAVIGATION & SEARCH -->
+  <nav class="mart-main-header">
+    <div class="container mart-header-row">
+      <a href="index.html" class="mart-site-logo">
+        <img src="assets/logo.jpg" alt="Bhutan Global Mart Logo" class="mart-logo-img">
+      </a>
 
-        <!-- Search Bar with Category Dropdown -->
-        <div class="mart-search-bar">
-          <button type="button" class="btn-all-categories" onclick="document.getElementById('categoryRibbon').scrollIntoView({behavior: 'smooth'})">
-            <span>☰ All Categories</span>
-          </button>
-          <input type="search" class="mart-search-input" id="mainSearchInput" placeholder="Search for products, brands, categories (e.g. Earbuds, Watch, Jacket)...">
-          <button type="button" class="mart-search-submit" onclick="performStoreSearch()" aria-label="Search">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-          </button>
-        </div>
+      <!-- Search Combo Bar -->
+      <div class="search-category-combo">
+        <button type="button" class="btn-all-categories-head" onclick="document.getElementById('categorySection').scrollIntoView({behavior:'smooth'})">
+          <span>☰ All Categories</span>
+        </button>
+        <input type="search" id="storeSearchInput" class="search-field-input" placeholder="Search for products, brands, categories...">
+        <button type="button" class="btn-search-icon-submit" onclick="performStoreSearch()" aria-label="Search Catalog">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+      </div>
 
-        <!-- Social Channels & Video Feed Links -->
-        <div class="mart-header-socials">
-          <span class="header-social-subtext">Follow us &amp; Watch Product Videos</span>
-          <div class="header-social-row">
-            <a href="#" class="header-social-btn tiktok" title="TikTok Live Deals">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .58.04.85.12V9.4a6.33 6.33 0 0 0-.85-.06A6.34 6.34 0 0 0 3 15.68a6.34 6.34 0 0 0 10.82 4.48 6.3 6.3 0 0 0 1.87-4.49V8.65a8.28 8.28 0 0 0 4.9 1.58V6.78a4.83 4.83 0 0 1-1-.09z"/></svg>
-            </a>
-            <a href="#" class="header-social-btn fb" title="Facebook Page">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-            </a>
-            <a href="#" class="header-social-btn ig" title="Instagram Store">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path></svg>
-            </a>
-            <a href="#" class="header-social-btn yt" title="YouTube Reviews">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33zM9.75 15.02V8.48l5.75 3.27-5.75 3.27z"/></svg>
-            </a>
-          </div>
+      <!-- Social Channels -->
+      <div class="header-social-channels">
+        <span class="social-watch-text">Follow us &amp; Watch Product Videos</span>
+        <div class="social-pills-row">
+          <a href="#" class="social-pill-icon tiktok" title="TikTok"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .58.04.85.12V9.4a6.33 6.33 0 0 0-.85-.06A6.34 6.34 0 0 0 3 15.68a6.34 6.34 0 0 0 10.82 4.48 6.3 6.3 0 0 0 1.87-4.49V8.65a8.28 8.28 0 0 0 4.9 1.58V6.78a4.83 4.83 0 0 1-1-.09z"/></svg></a>
+          <a href="#" class="social-pill-icon fb" title="Facebook"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" class="social-pill-icon ig" title="Instagram"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path></svg></a>
+          <a href="#" class="social-pill-icon yt" title="YouTube"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33zM9.75 15.02V8.48l5.75 3.27-5.75 3.27z"/></svg></a>
         </div>
       </div>
     </div>
   </nav>
 
-  <!-- HERO SECTION WITH INTERACTIVE AI SHOPPING ASSISTANT -->
-  <section class="mart-hero" id="hero">
+  <!-- HERO SECTION WITH AI ASSISTANT -->
+  <section class="mart-hero-banner" id="hero">
     <div class="container">
       <div class="mart-hero-grid">
         <!-- Left Hero Content -->
-        <div class="mart-hero-left">
-          <span class="hero-subtitle-tag">International Products</span>
-          <h1 class="hero-main-heading">Wholesale Prices</h1>
-          <p class="hero-sourcing-title">Direct from Alibaba, AliExpress &amp; Amazon</p>
+        <div class="mart-hero-left-box">
+          <span class="hero-tag-intl">International Products</span>
+          <h1 class="hero-title-wholesale">Wholesale Prices</h1>
+          <div class="hero-title-direct">Direct from Alibaba, AliExpress &amp; Amazon</div>
 
-          <!-- Verified Sourcing Platform Badges -->
-          <div class="platform-pill-badges">
-            <div class="platform-pill">
-              <span style="font-weight: 900; color: #ff6a00; font-size: 1.15rem; letter-spacing: -0.5px;">Alibaba<span style="font-size: 0.75rem; color:#475569;">.com</span></span>
+          <!-- Partner White Badges -->
+          <div class="partner-badges-strip">
+            <div class="partner-white-card">
+              <span class="partner-name-alibaba">Alibaba<span style="font-size:0.7rem; color:#475569;">.com</span></span>
             </div>
-            <div class="platform-pill">
-              <span style="font-weight: 900; color: #e62e04; font-size: 1.15rem;">AliExpress</span>
+            <div class="partner-white-card">
+              <span class="partner-name-aliexpress">AliExpress</span>
             </div>
-            <div class="platform-pill">
-              <span style="font-weight: 900; color: #232f3e; font-size: 1.15rem;">amazon</span>
+            <div class="partner-white-card">
+              <span class="partner-name-amazon">amazon</span>
             </div>
           </div>
 
-          <!-- 5 Value Proposition Cards -->
-          <div class="hero-props-row">
-            <div class="prop-card">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
-              <span class="prop-text">Wide Range of Products</span>
+          <!-- 5 Value Proposition Badges -->
+          <div class="value-props-strip">
+            <div class="value-prop-box">
+              <span class="prop-icon-glyph">📦</span>
+              <span class="prop-label-text">Wide Range of Products</span>
             </div>
-            <div class="prop-card">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span class="prop-text">Bulk Order &amp; MOQ</span>
+            <div class="value-prop-box">
+              <span class="prop-icon-glyph">🛒</span>
+              <span class="prop-label-text">Bulk Order &amp; MOQ</span>
             </div>
-            <div class="prop-card">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-              <span class="prop-text">Flexible Pricing (Owner Controlled)</span>
+            <div class="value-prop-box">
+              <span class="prop-icon-glyph">🏷️</span>
+              <span class="prop-label-text">Flexible Pricing (Owner Controlled)</span>
             </div>
-            <div class="prop-card">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-              <span class="prop-text">Global Shipping Support</span>
+            <div class="value-prop-box">
+              <span class="prop-icon-glyph">✈️</span>
+              <span class="prop-label-text">Global Shipping Support</span>
             </div>
-            <div class="prop-card">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
-              <span class="prop-text">Secure Payment Options</span>
+            <div class="value-prop-box">
+              <span class="prop-icon-glyph">🔒</span>
+              <span class="prop-label-text">Secure Payment Options</span>
             </div>
           </div>
 
-          <div class="hero-motto-line">Smart Shopping &bull; Bigger Savings &bull; Global Choices</div>
+          <div class="hero-tagline-motto">Smart Shopping &bull; Bigger Savings &bull; Global Choices</div>
         </div>
 
-        <!-- Right: AI Shopping Assistant Widget -->
-        <div class="ai-assistant-card" id="aiAssistantWidget">
-          <div class="ai-card-header">
-            <div class="ai-avatar">
-              <!-- Robot icon -->
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="3" y="11" width="18" height="10" rx="2"></rect>
-                <circle cx="12" cy="5" r="2"></circle>
-                <path d="M12 7v4"></path>
-                <line x1="8" y1="16" x2="8" y2="16"></line>
-                <line x1="16" y1="16" x2="16" y2="16"></line>
-              </svg>
-              <span class="ai-status-pulse"></span>
+        <!-- Right AI Assistant Card -->
+        <div class="ai-guide-widget" id="aiAssistantWidget">
+          <div class="ai-widget-header">
+            <div class="ai-bot-avatar">
+              <span>🤖</span>
+              <span class="ai-live-dot"></span>
             </div>
-            <div class="ai-title-wrap">
-              <span class="ai-card-name">AI Assistant</span>
-              <span class="ai-card-sub">Your Smart Shopping Guide</span>
+            <div>
+              <div class="ai-header-title">AI Assistant</div>
+              <div class="ai-header-sub">Your Smart Shopping Guide</div>
             </div>
           </div>
 
-          <div class="ai-card-chat-body" id="aiChatBody">
-            <div class="ai-bubble">
+          <div class="ai-chat-body" id="aiChatBody">
+            <div class="ai-greeting-bubble">
               Hello! I'm your AI shopping assistant. Tell me what you need &ndash; preferred color, size, price or style. I will help you find the best products, compare options and even add them to your cart!
             </div>
 
-            <!-- Quick Action Prompts matching screenshot -->
-            <div class="ai-prompt-chips">
-              <button type="button" class="prompt-chip-btn" onclick="sendAIPrompt('Show me best-selling items')">
-                <span>⚡ Show me best-selling items</span>
+            <div class="ai-chips-list">
+              <button type="button" class="ai-prompt-pill" onclick="sendAIPrompt('Show me best-selling items')">
+                Show me best-selling items
               </button>
-              <button type="button" class="prompt-chip-btn" onclick="sendAIPrompt('I want a red jacket, size L')">
-                <span>🧥 I want a red jacket, size L</span>
+              <button type="button" class="ai-prompt-pill" onclick="sendAIPrompt('I want a red jacket, size L')">
+                I want a red jacket, size L
               </button>
-              <button type="button" class="prompt-chip-btn" onclick="sendAIPrompt('Find items under $20')">
-                <span>🏷️ Find items under $20</span>
+              <button type="button" class="ai-prompt-pill" onclick="sendAIPrompt('Find items under $20')">
+                Find items under $20
               </button>
-              <button type="button" class="prompt-chip-btn" onclick="sendAIPrompt('Add to my cart')">
-                <span>🛒 Add to my cart</span>
+              <button type="button" class="ai-prompt-pill" onclick="sendAIPrompt('Add to my cart')">
+                Add to my cart
               </button>
             </div>
           </div>
 
-          <!-- Chat input -->
-          <div class="ai-chat-input-bar">
-            <input type="text" class="ai-chat-input" id="aiChatInput" placeholder="Type your message...">
-            <button type="button" class="ai-chat-send" id="aiSendBtn" aria-label="Send Message to AI">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+          <div class="ai-input-group">
+            <input type="text" id="aiChatInput" class="ai-text-input" placeholder="Type your message...">
+            <button type="button" id="aiSendBtn" class="ai-send-action-btn" aria-label="Send Message">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
             </button>
           </div>
         </div>
@@ -221,247 +182,200 @@
   </section>
 
   <!-- CATEGORY RIBBON -->
-  <section class="category-ribbon" id="categoryRibbon">
+  <section class="category-strip-section" id="categorySection">
     <div class="container">
-      <div class="category-scroll">
-        <!-- 1. Electronics -->
-        <div class="category-item" onclick="filterByCategory('Electronics')">
-          <div class="cat-icon-wrap">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
-          </div>
-          <span class="cat-name">Electronics &amp; Gadgets</span>
+      <div class="category-items-flex">
+        <div class="cat-box-btn" onclick="filterByCategory('Electronics')">
+          <div class="cat-circle-wrap">📱</div>
+          <span class="cat-title-text">Electronics &amp; Gadgets</span>
         </div>
-
-        <!-- 2. Fashion -->
-        <div class="category-item" onclick="filterByCategory('Fashion')">
-          <div class="cat-icon-wrap">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.38 3.46L16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"></path></svg>
-          </div>
-          <span class="cat-name">Fashion &amp; Apparel</span>
+        <div class="cat-box-btn" onclick="filterByCategory('Fashion')">
+          <div class="cat-circle-wrap">👕</div>
+          <span class="cat-title-text">Fashion &amp; Apparel</span>
         </div>
-
-        <!-- 3. Home & Living -->
-        <div class="category-item" onclick="filterByCategory('Home')">
-          <div class="cat-icon-wrap">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-          </div>
-          <span class="cat-name">Home &amp; Living</span>
+        <div class="cat-box-btn" onclick="filterByCategory('Home')">
+          <div class="cat-circle-wrap">🏠</div>
+          <span class="cat-title-text">Home &amp; Living</span>
         </div>
-
-        <!-- 4. Beauty & Health -->
-        <div class="category-item" onclick="filterByCategory('Beauty')">
-          <div class="cat-icon-wrap">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
-          </div>
-          <span class="cat-name">Beauty &amp; Health</span>
+        <div class="cat-box-btn" onclick="filterByCategory('Beauty')">
+          <div class="cat-circle-wrap">💄</div>
+          <span class="cat-title-text">Beauty &amp; Health</span>
         </div>
-
-        <!-- 5. Sports & Outdoor -->
-        <div class="category-item" onclick="filterByCategory('Sports')">
-          <div class="cat-icon-wrap">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M4.93 4.93l4.24 4.24M14.83 14.83l4.24 4.24M14.83 9.17l4.24-4.24M4.93 19.07l4.24-4.24"></path></svg>
-          </div>
-          <span class="cat-name">Sports &amp; Outdoor</span>
+        <div class="cat-box-btn" onclick="filterByCategory('Sports')">
+          <div class="cat-circle-wrap">⚽</div>
+          <span class="cat-title-text">Sports &amp; Outdoor</span>
         </div>
-
-        <!-- 6. Toys & Baby -->
-        <div class="category-item" onclick="filterByCategory('Toys')">
-          <div class="cat-icon-wrap">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-          </div>
-          <span class="cat-name">Toys &amp; Baby</span>
+        <div class="cat-box-btn" onclick="filterByCategory('Toys')">
+          <div class="cat-circle-wrap">🧸</div>
+          <span class="cat-title-text">Toys &amp; Baby</span>
         </div>
-
-        <!-- 7. Automotive -->
-        <div class="category-item" onclick="filterByCategory('Automotive')">
-          <div class="cat-icon-wrap">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
-          </div>
-          <span class="cat-name">Automotive</span>
+        <div class="cat-box-btn" onclick="filterByCategory('Automotive')">
+          <div class="cat-circle-wrap">🚗</div>
+          <span class="cat-title-text">Automotive</span>
         </div>
-
-        <!-- 8. Industrial & Tools -->
-        <div class="category-item" onclick="filterByCategory('Industrial')">
-          <div class="cat-icon-wrap">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
-          </div>
-          <span class="cat-name">Industrial &amp; Tools</span>
+        <div class="cat-box-btn" onclick="filterByCategory('Industrial')">
+          <div class="cat-circle-wrap">🏭</div>
+          <span class="cat-title-text">Industrial &amp; Tools</span>
         </div>
-
-        <!-- 9. More -->
-        <div class="category-item" onclick="filterByCategory('All')">
-          <div class="cat-icon-wrap">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
-          </div>
-          <span class="cat-name">More Categories</span>
+        <div class="cat-box-btn" onclick="filterByCategory('All')">
+          <div class="cat-circle-wrap">🔲</div>
+          <span class="cat-title-text">More Categories</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FEATURED PRODUCTS SECTION -->
-  <section class="mart-section" id="featured-products">
+  <!-- FEATURED PRODUCTS SECTION (6 CARDS WITH CROPPED ASSETS) -->
+  <section class="featured-products-section" id="featuredProducts">
     <div class="container">
-      <div class="mart-section-head">
-        <h2 class="mart-section-title">
-          <span>🔥</span> Featured Products &ndash; Top trending products from Alibaba, AliExpress &amp; Amazon
+      <div class="products-head-bar">
+        <h2 class="products-main-title">
+          <span style="color:#f97316;">🔥</span> Featured Products &ndash; Top trending products from Alibaba, AliExpress &amp; Amazon
         </h2>
-        <a href="shop.html" class="mart-section-link">
+        <a href="shop.html" class="products-view-link">
           <span>View All Products</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          <span>&rarr;</span>
         </a>
       </div>
 
-      <div class="products-grid" id="featuredProductsGrid">
+      <div class="products-cards-row" id="featuredGrid">
         <!-- 1. Wireless Earbuds -->
-        <article class="product-card" data-category="Electronics">
-          <div class="product-thumb-wrap">
-            <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=400&q=80" alt="Wireless Earbuds">
-            <span class="product-badge new">New</span>
-            <button type="button" class="btn-wishlist" aria-label="Add to Wishlist">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-            </button>
+        <article class="product-item-card" data-category="Electronics">
+          <div class="product-img-box">
+            <img src="assets/prod-earbuds.jpg" alt="Wireless Earbuds">
+            <span class="product-ribbon-tag new">New</span>
+            <button type="button" class="btn-item-wishlist" aria-label="Add to Wishlist">🤍</button>
           </div>
-          <div class="product-body">
-            <h3 class="product-title">Wireless Earbuds</h3>
-            <div class="product-rating-row">
-              <span class="rating-star">★ 4.8</span>
-              <span>(2.3k reviews)</span>
+          <div class="product-details-box">
+            <h3 class="prod-item-name">Wireless Earbuds</h3>
+            <div class="prod-rating-line">
+              <span class="rating-star-yellow">★ 4.8</span>
+              <span>(2.3k)</span>
             </div>
-            <div class="product-moq">MOQ: 50 pcs</div>
-            <div class="product-price-tier">
-              <span data-base-price="8.50">$8.50</span> - <span data-base-price="11.20">$11.20</span> <span style="font-size:0.75rem; color:#64748b; font-weight:normal;">/pc</span>
+            <div class="prod-moq-spec">MOQ: 50 pcs</div>
+            <div class="prod-price-range">
+              <span data-base-price="8.50">$8.50</span> &ndash; <span data-base-price="11.20">$11.20</span> <span style="font-size:0.7rem; color:#64748b; font-weight:normal;">/pc</span>
             </div>
-            <div class="product-source-pills">
-              <span class="source-tag amazon">Amazon</span>
-              <button type="button" class="btn-quick-add" onclick="addToCartDirect('Wireless Earbuds', 8.50, 'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=150&q=80')">+ Add to Cart</button>
+            <div class="prod-source-actions-row">
+              <span class="source-pill-label amazon">Amazon</span>
+              <button type="button" class="btn-add-cart-mini" onclick="addToCartDirect('Wireless Earbuds', 8.50, 'assets/prod-earbuds.jpg')">+ Cart</button>
             </div>
           </div>
         </article>
 
         <!-- 2. Smart Watch -->
-        <article class="product-card" data-category="Electronics">
-          <div class="product-thumb-wrap">
-            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=400&q=80" alt="Smart Watch">
-            <span class="product-badge bestseller">Best Seller</span>
-            <button type="button" class="btn-wishlist" aria-label="Add to Wishlist">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-            </button>
+        <article class="product-item-card" data-category="Electronics">
+          <div class="product-img-box">
+            <img src="assets/prod-watch.jpg" alt="Smart Watch">
+            <span class="product-ribbon-tag bestseller">Best Seller</span>
+            <button type="button" class="btn-item-wishlist" aria-label="Add to Wishlist">🤍</button>
           </div>
-          <div class="product-body">
-            <h3 class="product-title">Smart Watch Pro</h3>
-            <div class="product-rating-row">
-              <span class="rating-star">★ 4.7</span>
-              <span>(1.8k reviews)</span>
+          <div class="product-details-box">
+            <h3 class="prod-item-name">Smart Watch</h3>
+            <div class="prod-rating-line">
+              <span class="rating-star-yellow">★ 4.7</span>
+              <span>(1.8k)</span>
             </div>
-            <div class="product-moq">MOQ: 20 pcs</div>
-            <div class="product-price-tier">
-              <span data-base-price="15.00">$15.00</span> - <span data-base-price="22.00">$22.00</span> <span style="font-size:0.75rem; color:#64748b; font-weight:normal;">/pc</span>
+            <div class="prod-moq-spec">MOQ: 20 pcs</div>
+            <div class="prod-price-range">
+              <span data-base-price="15.00">$15.00</span> &ndash; <span data-base-price="22.00">$22.00</span> <span style="font-size:0.7rem; color:#64748b; font-weight:normal;">/pc</span>
             </div>
-            <div class="product-source-pills">
-              <span class="source-tag alibaba">Alibaba</span>
-              <button type="button" class="btn-quick-add" onclick="addToCartDirect('Smart Watch Pro', 15.00, 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=150&q=80')">+ Add to Cart</button>
+            <div class="prod-source-actions-row">
+              <span class="source-pill-label alibaba">Alibaba</span>
+              <button type="button" class="btn-add-cart-mini" onclick="addToCartDirect('Smart Watch Pro', 15.00, 'assets/prod-watch.jpg')">+ Cart</button>
             </div>
           </div>
         </article>
 
         <!-- 3. Winter Jacket -->
-        <article class="product-card" data-category="Fashion">
-          <div class="product-thumb-wrap">
-            <img src="https://images.unsplash.com/photo-1544923246-77307dd654cb?auto=format&fit=crop&w=400&q=80" alt="Winter Jacket">
-            <span class="product-badge hot">Hot</span>
-            <button type="button" class="btn-wishlist" aria-label="Add to Wishlist">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-            </button>
+        <article class="product-item-card" data-category="Fashion">
+          <div class="product-img-box">
+            <img src="assets/prod-jacket.jpg" alt="Winter Jacket">
+            <span class="product-ribbon-tag hot">Hot</span>
+            <button type="button" class="btn-item-wishlist" aria-label="Add to Wishlist">🤍</button>
           </div>
-          <div class="product-body">
-            <h3 class="product-title">Winter Thermal Jacket</h3>
-            <div class="product-rating-row">
-              <span class="rating-star">★ 4.6</span>
-              <span>(1.2k reviews)</span>
+          <div class="product-details-box">
+            <h3 class="prod-item-name">Winter Jacket</h3>
+            <div class="prod-rating-line">
+              <span class="rating-star-yellow">★ 4.6</span>
+              <span>(1.2k)</span>
             </div>
-            <div class="product-moq">MOQ: 50 pcs</div>
-            <div class="product-price-tier">
-              <span data-base-price="12.00">$12.00</span> - <span data-base-price="18.00">$18.00</span> <span style="font-size:0.75rem; color:#64748b; font-weight:normal;">/pc</span>
+            <div class="prod-moq-spec">MOQ: 50 pcs</div>
+            <div class="prod-price-range">
+              <span data-base-price="12.00">$12.00</span> &ndash; <span data-base-price="18.00">$18.00</span> <span style="font-size:0.7rem; color:#64748b; font-weight:normal;">/pc</span>
             </div>
-            <div class="product-source-pills">
-              <span class="source-tag aliexpress">AliExpress</span>
-              <button type="button" class="btn-quick-add" onclick="addToCartDirect('Winter Thermal Jacket', 12.00, 'https://images.unsplash.com/photo-1544923246-77307dd654cb?auto=format&fit=crop&w=150&q=80')">+ Add to Cart</button>
+            <div class="prod-source-actions-row">
+              <span class="source-pill-label aliexpress">AliExpress</span>
+              <button type="button" class="btn-add-cart-mini" onclick="addToCartDirect('Winter Thermal Jacket', 12.00, 'assets/prod-jacket.jpg')">+ Cart</button>
             </div>
           </div>
         </article>
 
         <!-- 4. Air Fryer -->
-        <article class="product-card" data-category="Home">
-          <div class="product-thumb-wrap">
-            <img src="https://images.unsplash.com/photo-1585515320310-259814833e62?auto=format&fit=crop&w=400&q=80" alt="Air Fryer">
-            <button type="button" class="btn-wishlist" aria-label="Add to Wishlist">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-            </button>
+        <article class="product-item-card" data-category="Home">
+          <div class="product-img-box">
+            <img src="assets/prod-airfryer.jpg" alt="Air Fryer">
+            <button type="button" class="btn-item-wishlist" aria-label="Add to Wishlist">🤍</button>
           </div>
-          <div class="product-body">
-            <h3 class="product-title">Digital Air Fryer 4.5L</h3>
-            <div class="product-rating-row">
-              <span class="rating-star">★ 4.9</span>
-              <span>(980 reviews)</span>
+          <div class="product-details-box">
+            <h3 class="prod-item-name">Air Fryer</h3>
+            <div class="prod-rating-line">
+              <span class="rating-star-yellow">★ 4.9</span>
+              <span>(980)</span>
             </div>
-            <div class="product-moq">MOQ: 10 pcs</div>
-            <div class="product-price-tier">
-              <span data-base-price="25.00">$25.00</span> - <span data-base-price="38.00">$38.00</span> <span style="font-size:0.75rem; color:#64748b; font-weight:normal;">/pc</span>
+            <div class="prod-moq-spec">MOQ: 10 pcs</div>
+            <div class="prod-price-range">
+              <span data-base-price="25.00">$25.00</span> &ndash; <span data-base-price="38.00">$38.00</span> <span style="font-size:0.7rem; color:#64748b; font-weight:normal;">/pc</span>
             </div>
-            <div class="product-source-pills">
-              <span class="source-tag amazon">Amazon</span>
-              <button type="button" class="btn-quick-add" onclick="addToCartDirect('Digital Air Fryer 4.5L', 25.00, 'https://images.unsplash.com/photo-1585515320310-259814833e62?auto=format&fit=crop&w=150&q=80')">+ Add to Cart</button>
+            <div class="prod-source-actions-row">
+              <span class="source-pill-label amazon">Amazon</span>
+              <button type="button" class="btn-add-cart-mini" onclick="addToCartDirect('Digital Air Fryer', 25.00, 'assets/prod-airfryer.jpg')">+ Cart</button>
             </div>
           </div>
         </article>
 
         <!-- 5. Travel Backpack -->
-        <article class="product-card" data-category="Fashion">
-          <div class="product-thumb-wrap">
-            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=400&q=80" alt="Travel Backpack">
-            <button type="button" class="btn-wishlist" aria-label="Add to Wishlist">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-            </button>
+        <article class="product-item-card" data-category="Fashion">
+          <div class="product-img-box">
+            <img src="assets/prod-backpack.jpg" alt="Travel Backpack">
+            <button type="button" class="btn-item-wishlist" aria-label="Add to Wishlist">🤍</button>
           </div>
-          <div class="product-body">
-            <h3 class="product-title">Travel Backpack (Expandable)</h3>
-            <div class="product-rating-row">
-              <span class="rating-star">★ 4.7</span>
-              <span>(1.4k reviews)</span>
+          <div class="product-details-box">
+            <h3 class="prod-item-name">Travel Backpack</h3>
+            <div class="prod-rating-line">
+              <span class="rating-star-yellow">★ 4.7</span>
+              <span>(1.4k)</span>
             </div>
-            <div class="product-moq">MOQ: 30 pcs</div>
-            <div class="product-price-tier">
-              <span data-base-price="10.00">$10.00</span> - <span data-base-price="16.00">$16.00</span> <span style="font-size:0.75rem; color:#64748b; font-weight:normal;">/pc</span>
+            <div class="prod-moq-spec">MOQ: 30 pcs</div>
+            <div class="prod-price-range">
+              <span data-base-price="10.00">$10.00</span> &ndash; <span data-base-price="16.00">$16.00</span> <span style="font-size:0.7rem; color:#64748b; font-weight:normal;">/pc</span>
             </div>
-            <div class="product-source-pills">
-              <span class="source-tag alibaba">Alibaba</span>
-              <button type="button" class="btn-quick-add" onclick="addToCartDirect('Travel Backpack', 10.00, 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=150&q=80')">+ Add to Cart</button>
+            <div class="prod-source-actions-row">
+              <span class="source-pill-label alibaba">Alibaba</span>
+              <button type="button" class="btn-add-cart-mini" onclick="addToCartDirect('Travel Backpack', 10.00, 'assets/prod-backpack.jpg')">+ Cart</button>
             </div>
           </div>
         </article>
 
-        <!-- 6. LED Bulb 10 pcs -->
-        <article class="product-card" data-category="Home">
-          <div class="product-thumb-wrap">
-            <img src="https://images.unsplash.com/photo-1550985543-f47f38aeee65?auto=format&fit=crop&w=400&q=80" alt="LED Bulb Pack">
-            <button type="button" class="btn-wishlist" aria-label="Add to Wishlist">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-            </button>
+        <!-- 6. LED Bulb (10 pcs) -->
+        <article class="product-item-card" data-category="Home">
+          <div class="product-img-box">
+            <img src="assets/prod-led.jpg" alt="LED Bulb Pack">
+            <button type="button" class="btn-item-wishlist" aria-label="Add to Wishlist">🤍</button>
           </div>
-          <div class="product-body">
-            <h3 class="product-title">LED Bulb (10 pcs Pack)</h3>
-            <div class="product-rating-row">
-              <span class="rating-star">★ 4.8</span>
-              <span>(760 reviews)</span>
+          <div class="product-details-box">
+            <h3 class="prod-item-name">LED Bulb (10 pcs)</h3>
+            <div class="prod-rating-line">
+              <span class="rating-star-yellow">★ 4.8</span>
+              <span>(760)</span>
             </div>
-            <div class="product-moq">MOQ: 100 pcs</div>
-            <div class="product-price-tier">
-              <span data-base-price="5.50">$5.50</span> - <span data-base-price="8.00">$8.00</span> <span style="font-size:0.75rem; color:#64748b; font-weight:normal;">/pc</span>
+            <div class="prod-moq-spec">MOQ: 100 pcs</div>
+            <div class="prod-price-range">
+              <span data-base-price="5.50">$5.50</span> &ndash; <span data-base-price="8.00">$8.00</span> <span style="font-size:0.7rem; color:#64748b; font-weight:normal;">/pc</span>
             </div>
-            <div class="product-source-pills">
-              <span class="source-tag aliexpress">AliExpress</span>
-              <button type="button" class="btn-quick-add" onclick="addToCartDirect('LED Bulb 10 pcs', 5.50, 'https://images.unsplash.com/photo-1550985543-f47f38aeee65?auto=format&fit=crop&w=150&q=80')">+ Add to Cart</button>
+            <div class="prod-source-actions-row">
+              <span class="source-pill-label aliexpress">AliExpress</span>
+              <button type="button" class="btn-add-cart-mini" onclick="addToCartDirect('LED Bulb 10 pcs', 5.50, 'assets/prod-led.jpg')">+ Cart</button>
             </div>
           </div>
         </article>
@@ -469,246 +383,194 @@
     </div>
   </section>
 
-  <!-- PRODUCT VIDEOS & SOCIAL MEDIA SECTION -->
-  <section class="mart-section" style="padding-top: 10px;">
+  <!-- PRODUCT VIDEOS & SOCIAL MEDIA BANNER -->
+  <section class="videos-social-section">
     <div class="container">
-      <div class="videos-social-grid">
-        <!-- Left: Product Videos -->
+      <div class="videos-social-split-grid">
+        <!-- Videos Left -->
         <div>
-          <div class="mart-section-head" style="margin-bottom: 14px;">
-            <h2 class="mart-section-title" style="font-size: 1.15rem;">
+          <div class="products-head-bar" style="margin-bottom: 12px;">
+            <h2 class="products-main-title" style="font-size: 1.05rem;">
               <span style="color:#ef4444;">▶</span> Product Videos &ndash; Watch real product videos before you buy
             </h2>
-            <a href="#" class="mart-section-link" onclick="openProductVideo('Wholesale Verification Suite', '05:00')">View All Videos &rarr;</a>
+            <a href="#" class="products-view-link">View All Videos &rarr;</a>
           </div>
 
-          <div class="video-cards-row">
-            <!-- Video 1 -->
-            <div class="video-card" onclick="openProductVideo('Wireless Earbuds – Full Review & Features', '02:36')">
-              <div class="video-thumb">
-                <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=300&q=80" alt="Earbuds Video">
-                <div class="video-play-btn">▶</div>
-                <span class="video-duration">02:36</span>
+          <div class="video-tiles-grid">
+            <div class="video-thumb-card" onclick="openProductVideo('Wireless Earbuds – Full Review & Features', '02:36')">
+              <div class="video-media-frame">
+                <img src="assets/video-1.jpg" alt="Earbuds Video">
+                <div class="video-play-center">▶</div>
+                <span class="video-duration-tag">02:36</span>
               </div>
-              <div class="video-card-title">Wireless Earbuds &ndash; Full Review &amp; Features</div>
+              <div class="video-card-caption">Wireless Earbuds &ndash; Full Review &amp; Features</div>
             </div>
 
-            <!-- Video 2 -->
-            <div class="video-card" onclick="openProductVideo('Winter Jacket – Quality & Comfort Test', '03:12')">
-              <div class="video-thumb">
-                <img src="https://images.unsplash.com/photo-1544923246-77307dd654cb?auto=format&fit=crop&w=300&q=80" alt="Jacket Video">
-                <div class="video-play-btn">▶</div>
-                <span class="video-duration">03:12</span>
+            <div class="video-thumb-card" onclick="openProductVideo('Winter Jacket – Quality & Comfort Test', '03:12')">
+              <div class="video-media-frame">
+                <img src="assets/video-2.jpg" alt="Jacket Video">
+                <div class="video-play-center">▶</div>
+                <span class="video-duration-tag">03:12</span>
               </div>
-              <div class="video-card-title">Winter Jacket &ndash; Quality &amp; Comfort Test</div>
+              <div class="video-card-caption">Winter Jacket &ndash; Quality &amp; Comfort Test</div>
             </div>
 
-            <!-- Video 3 -->
-            <div class="video-card" onclick="openProductVideo('Air Fryer – Cooking Demo', '01:45')">
-              <div class="video-thumb">
-                <img src="https://images.unsplash.com/photo-1585515320310-259814833e62?auto=format&fit=crop&w=300&q=80" alt="Air Fryer Demo">
-                <div class="video-play-btn">▶</div>
-                <span class="video-duration">01:45</span>
+            <div class="video-thumb-card" onclick="openProductVideo('Air Fryer – Cooking Demo', '01:45')">
+              <div class="video-media-frame">
+                <img src="assets/video-3.jpg" alt="Air Fryer Video">
+                <div class="video-play-center">▶</div>
+                <span class="video-duration-tag">01:45</span>
               </div>
-              <div class="video-card-title">Air Fryer &ndash; Cooking Demo</div>
+              <div class="video-card-caption">Air Fryer &ndash; Cooking Demo</div>
             </div>
 
-            <!-- Video 4 -->
-            <div class="video-card" onclick="openProductVideo('Smart Watch – Features & Setup', '02:58')">
-              <div class="video-thumb">
-                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=300&q=80" alt="Smart Watch Demo">
-                <div class="video-play-btn">▶</div>
-                <span class="video-duration">02:58</span>
+            <div class="video-thumb-card" onclick="openProductVideo('Smart Watch – Features & Setup', '02:58')">
+              <div class="video-media-frame">
+                <img src="assets/video-4.jpg" alt="Watch Video">
+                <div class="video-play-center">▶</div>
+                <span class="video-duration-tag">02:58</span>
               </div>
-              <div class="video-card-title">Smart Watch &ndash; Features &amp; Setup</div>
+              <div class="video-card-caption">Smart Watch &ndash; Features &amp; Setup</div>
             </div>
           </div>
         </div>
 
-        <!-- Right: Shop on Social Media -->
-        <div class="social-media-shop-card">
-          <div class="social-shop-head">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-            <div>
-              <h3 style="font-size: 1.05rem; font-weight: 800;">Shop on Social Media</h3>
-              <p style="font-size: 0.75rem; color: #e0f2fe;">Follow us for latest deals &amp; live wholesale offers</p>
-            </div>
-          </div>
-
-          <div class="social-channels-grid">
-            <div class="social-channel-item">
-              <span class="social-channel-name">TikTok</span>
-              <span class="social-channel-desc">Live Sales</span>
-            </div>
-            <div class="social-channel-item">
-              <span class="social-channel-name">Facebook</span>
-              <span class="social-channel-desc">Special Offers</span>
-            </div>
-            <div class="social-channel-item">
-              <span class="social-channel-name">Instagram</span>
-              <span class="social-channel-desc">New Arrivals</span>
-            </div>
-            <div class="social-channel-item">
-              <span class="social-channel-name">YouTube</span>
-              <span class="social-channel-desc">Product Videos</span>
-            </div>
-          </div>
-
-          <div class="social-cta-box">
-            <div class="social-cta-title">Follow &bull; Like &bull; Share</div>
-            <div class="social-cta-sub">Get Exclusive 10% Wholesale Discount Code: <strong>BHUTAN10</strong></div>
-          </div>
+        <!-- Social Media Right -->
+        <div class="social-shop-media-card">
+          <img src="assets/social-shop-banner.jpg" alt="Shop on Social Media - TikTok, Facebook, Instagram, YouTube" style="width:100%; border-radius:4px;">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- WHOLESALE SOURCING GUARANTEE STRIP -->
+  <!-- WHOLESALE GUARANTEE STRIP -->
   <section class="container">
-    <div class="wholesale-guarantee-bar">
-      <div class="guarantee-grid" style="padding: 0 24px;">
-        <!-- 1 -->
-        <div class="guarantee-item">
-          <div class="guarantee-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
-          </div>
-          <div>
-            <h4 class="guarantee-title">Bulk Orders &amp; Business Pricing</h4>
-            <p class="guarantee-sub">Special wholesale rates for bulk purchases and custom MOQ.</p>
-            <button type="button" class="btn-contact-wholesale" onclick="openBulkModal()">Contact Us</button>
-          </div>
+    <div class="guarantee-strip-box">
+      <div class="guarantee-col-item">
+        <div class="guarantee-icon-round">📦</div>
+        <div>
+          <h4 class="guarantee-heading">Bulk Orders &amp; Business Pricing</h4>
+          <p class="guarantee-subtext">Special wholesale rates for bulk purchases.</p>
         </div>
+      </div>
 
-        <!-- 2 -->
-        <div class="guarantee-item">
-          <div class="guarantee-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-          </div>
-          <div>
-            <h4 class="guarantee-title">Global Sourcing</h4>
-            <p class="guarantee-sub">Direct from Alibaba, AliExpress &amp; Amazon verified suppliers.</p>
-          </div>
+      <div class="guarantee-col-item">
+        <div class="guarantee-icon-round">🌐</div>
+        <div>
+          <h4 class="guarantee-heading">Global Sourcing</h4>
+          <p class="guarantee-subtext">Direct from Alibaba, AliExpress &amp; Amazon</p>
         </div>
+      </div>
 
-        <!-- 3 -->
-        <div class="guarantee-item">
-          <div class="guarantee-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-          </div>
-          <div>
-            <h4 class="guarantee-title">Secure &amp; Trusted</h4>
-            <p class="guarantee-sub">100% Authentic Products &amp; Safe Payments with local warranty.</p>
-          </div>
+      <div class="guarantee-col-item">
+        <div class="guarantee-icon-round">🛡️</div>
+        <div>
+          <h4 class="guarantee-heading">Secure &amp; Trusted</h4>
+          <p class="guarantee-subtext">100% Authentic Products &amp; Safe Payments</p>
         </div>
+      </div>
 
-        <!-- 4 -->
-        <div class="guarantee-item">
-          <div class="guarantee-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
-          </div>
-          <div>
-            <h4 class="guarantee-title">Worldwide Shipping</h4>
-            <p class="guarantee-sub">Fast &amp; Reliable Delivery Support straight to Thimphu &amp; Dzongkhags.</p>
-          </div>
+      <div class="guarantee-col-item">
+        <div class="guarantee-icon-round">🚚</div>
+        <div>
+          <h4 class="guarantee-heading">Worldwide Shipping</h4>
+          <p class="guarantee-subtext">Fast &amp; Reliable Delivery Support</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- FARM BROKERAGE SECTION -->
-  <section class="farm-brokerage-section" id="farm-brokerage">
+  <section class="farm-brokerage-wrap" id="farmBrokerage">
     <div class="container">
-      <div class="mart-section-head">
+      <div class="products-head-bar" style="margin-bottom: 14px;">
         <div>
-          <h2 class="mart-section-title" style="color: #166534;">
+          <h2 class="products-main-title" style="color: #166534;">
             <span>🌱</span> Farm Brokerage &ndash; Invest in Bhutan's Natural Beauty
           </h2>
-          <p style="font-size: 0.85rem; color: #475569; margin-top: 4px;">
+          <p style="font-size: 0.8rem; color: #475569; margin-top: 2px;">
             We also help you buy, sell and lease farms in Bhutan. Explore our curated farm listings with land videos.
           </p>
         </div>
-        <a href="farm-brokerage.html" class="mart-section-link" style="color: #166534;">
-          <span>View All Farms</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-        </a>
+        <a href="farm-brokerage.html" class="products-view-link" style="color: #166534;">View All Farms &rarr;</a>
       </div>
 
-      <div class="farm-grid">
-        <!-- Farm 1: Organic Apple Farm Paro -->
-        <article class="farm-card">
-          <div class="farm-thumb-wrap">
-            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=400&q=80" alt="Apple Farm Paro">
-            <div class="farm-play-badge">▶</div>
+      <div class="farm-listings-grid">
+        <!-- Farm 1 -->
+        <article class="farm-listing-card">
+          <div class="farm-img-frame">
+            <img src="assets/farm-1.jpg" alt="Organic Apple Farm Paro">
+            <div class="farm-play-center">▶</div>
           </div>
-          <div class="farm-body">
-            <h3 class="farm-title">Organic Apple Farm &ndash; Paro</h3>
-            <div class="farm-specs">15 Acres &bull; Natural Irrigation</div>
-            <div class="farm-price">Price: Nu. 8M &ndash; 12M</div>
-            <button type="button" class="btn-watch-farm-video" onclick="openFarmTour('Organic Apple Farm', 'Paro Valley', '15 Acres', 'Nu. 8M – 12M')">
-              <span>📹 Watch Video</span>
+          <div class="farm-info-body">
+            <h3 class="farm-prop-title">Organic Apple Farm &ndash; Paro</h3>
+            <div class="farm-prop-specs">15 Acres | Natural Spring</div>
+            <div class="farm-prop-price">Price: Nu. 8M &ndash; 12M</div>
+            <button type="button" class="btn-watch-farm-tour" onclick="openFarmTour('Organic Apple Farm', 'Paro Valley', '15 Acres', 'Nu. 8M – 12M')">
+              📹 Watch Video
             </button>
           </div>
         </article>
 
-        <!-- Farm 2: Vegetable Farm Thimphu -->
-        <article class="farm-card">
-          <div class="farm-thumb-wrap">
-            <img src="https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?auto=format&fit=crop&w=400&q=80" alt="Vegetable Farm Thimphu">
-            <div class="farm-play-badge">▶</div>
+        <!-- Farm 2 -->
+        <article class="farm-listing-card">
+          <div class="farm-img-frame">
+            <img src="assets/farm-2.jpg" alt="Vegetable Farm Thimphu">
+            <div class="farm-play-center">▶</div>
           </div>
-          <div class="farm-body">
-            <h3 class="farm-title">Vegetable Farm &ndash; Thimphu</h3>
-            <div class="farm-specs">8 Acres &bull; Greenhouse Included</div>
-            <div class="farm-price">Price: Nu. 5M &ndash; 8M</div>
-            <button type="button" class="btn-watch-farm-video" onclick="openFarmTour('Vegetable Farm', 'North Thimphu', '8 Acres', 'Nu. 5M – 8M')">
-              <span>📹 Watch Video</span>
+          <div class="farm-info-body">
+            <h3 class="farm-prop-title">Vegetable Farm &ndash; Thimphu</h3>
+            <div class="farm-prop-specs">8 Acres | Road Paved</div>
+            <div class="farm-prop-price">Price: Nu. 5M &ndash; 8M</div>
+            <button type="button" class="btn-watch-farm-tour" onclick="openFarmTour('Vegetable Farm', 'North Thimphu', '8 Acres', 'Nu. 5M – 8M')">
+              📹 Watch Video
             </button>
           </div>
         </article>
 
-        <!-- Farm 3: Dairy Farm Punakha -->
-        <article class="farm-card">
-          <div class="farm-thumb-wrap">
-            <img src="https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?auto=format&fit=crop&w=400&q=80" alt="Dairy Farm Punakha">
-            <div class="farm-play-badge">▶</div>
+        <!-- Farm 3 -->
+        <article class="farm-listing-card">
+          <div class="farm-img-frame">
+            <img src="assets/farm-3.jpg" alt="Dairy Farm Punakha">
+            <div class="farm-play-center">▶</div>
           </div>
-          <div class="farm-body">
-            <h3 class="farm-title">Dairy Farm &ndash; Punakha</h3>
-            <div class="farm-specs">20 Acres &bull; River Frontage</div>
-            <div class="farm-price">Price: Nu. 12M &ndash; 18M</div>
-            <button type="button" class="btn-watch-farm-video" onclick="openFarmTour('Dairy Farm', 'Punakha Valley', '20 Acres', 'Nu. 12M – 18M')">
-              <span>📹 Watch Video</span>
+          <div class="farm-info-body">
+            <h3 class="farm-prop-title">Dairy Farm &ndash; Punakha</h3>
+            <div class="farm-prop-specs">20 Acres | Riverfront</div>
+            <div class="farm-prop-price">Price: Nu. 12M &ndash; 18M</div>
+            <button type="button" class="btn-watch-farm-tour" onclick="openFarmTour('Dairy Farm', 'Punakha Valley', '20 Acres', 'Nu. 12M – 18M')">
+              📹 Watch Video
             </button>
           </div>
         </article>
 
-        <!-- Farm 4: Mixed Farm Wangdue -->
-        <article class="farm-card">
-          <div class="farm-thumb-wrap">
-            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=400&q=80" alt="Mixed Farm Wangdue">
-            <div class="farm-play-badge">▶</div>
+        <!-- Farm 4 -->
+        <article class="farm-listing-card">
+          <div class="farm-img-frame">
+            <img src="assets/farm-4.jpg" alt="Mixed Farm Wangdue">
+            <div class="farm-play-center">▶</div>
           </div>
-          <div class="farm-body">
-            <h3 class="farm-title">Mixed Farm &ndash; Wangdue</h3>
-            <div class="farm-specs">12 Acres &bull; Road Paved</div>
-            <div class="farm-price">Price: Nu. 7M &ndash; 11M</div>
-            <button type="button" class="btn-watch-farm-video" onclick="openFarmTour('Mixed Farm', 'Wangdue Phodrang', '12 Acres', 'Nu. 7M – 11M')">
-              <span>📹 Watch Video</span>
+          <div class="farm-info-body">
+            <h3 class="farm-prop-title">Mixed Farm &ndash; Wangdue</h3>
+            <div class="farm-prop-specs">12 Acres | Fully Fenced</div>
+            <div class="farm-prop-price">Price: Nu. 7M &ndash; 11M</div>
+            <button type="button" class="btn-watch-farm-tour" onclick="openFarmTour('Mixed Farm', 'Wangdue Phodrang', '12 Acres', 'Nu. 7M – 11M')">
+              📹 Watch Video
             </button>
           </div>
         </article>
 
-        <!-- Farm CTA Box -->
-        <div class="farm-cta-card">
+        <!-- Right Promo Card -->
+        <div class="farm-promo-highlight-box">
           <div>
-            <h3 class="farm-cta-title">Your Dream Farm in Bhutan Awaits</h3>
-            <ul class="farm-cta-list">
-              <li>✓ Verified Properties &amp; Lagthram</li>
-              <li>✓ Video Tour &amp; Drone Surveys</li>
-              <li>✓ Trusted NLCS Brokerage Service</li>
+            <h3 class="farm-promo-title">Your Dream Farm in Bhutan Awaits</h3>
+            <ul class="farm-promo-checklist">
+              <li>✓ Verified Properties</li>
+              <li>✓ Video Tour Available</li>
+              <li>✓ Trusted Brokerage Service</li>
             </ul>
           </div>
-          <button type="button" class="btn-enquire-farm" onclick="openFarmTour('Bhutan Agricultural Land Consultation', 'Thimphu / Paro / Punakha', 'Custom Size', 'On Inquiry')">
+          <button type="button" class="btn-enquire-farm-now" onclick="openFarmTour('Farmland Consultation', 'Thimphu / Paro / Punakha', 'Custom Size', 'On Request')">
             Enquire Now
           </button>
         </div>
@@ -717,198 +579,125 @@
   </section>
 
   <!-- CART SLIDEOUT DRAWER -->
-  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Cart">
-    <div class="cart-drawer-header">
-      <div class="cart-drawer-title">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-        <span>Wholesale Cart</span>
-      </div>
-      <button type="button" id="closeCartBtn" style="background:none; border:none; color:#ffffff; font-size:1.3rem; cursor:pointer;">✕</button>
+  <aside class="cart-drawer" id="cartDrawer" style="position:fixed; top:0; right:-420px; width:100%; max-width:400px; height:100vh; background:#fff; box-shadow:-5px 0 25px rgba(0,0,0,0.25); z-index:1000; transition:right 0.3s cubic-bezier(0.16,1,0.3,1); display:flex; flex-direction:column;">
+    <div style="padding:16px 20px; background:#07192d; color:#fff; display:flex; justify-content:space-between; align-items:center;">
+      <h3 style="font-size:1.05rem; font-weight:800;">🛒 Wholesale Cart</h3>
+      <button type="button" id="closeCartBtn" style="background:none; border:none; color:#fff; font-size:1.3rem; cursor:pointer;">✕</button>
     </div>
-
-    <div class="cart-drawer-items" id="cartItemsList">
-      <!-- Items dynamically populated via main.js -->
-    </div>
-
-    <div class="cart-drawer-footer">
-      <div class="cart-subtotal-row">
+    <div id="cartItemsList" style="flex-grow:1; padding:20px; overflow-y:auto; display:flex; flex-direction:column; gap:12px;"></div>
+    <div style="padding:20px; background:#f8fafc; border-top:1px solid #e2e8f0; display:flex; flex-direction:column; gap:10px;">
+      <div style="display:flex; justify-content:space-between; font-weight:800; font-size:1rem;">
         <span>Subtotal:</span>
         <span id="cartSubtotalAmount">$8.50</span>
       </div>
-      <p style="font-size:0.75rem; color:#64748b;">Includes import customs handling and local transport to Bhutan hubs.</p>
-      <button type="button" class="btn-checkout" onclick="alert('Proceeding to Bhutan Secure Checkout (M-BoB / B-Mobile / Card / Wire Transfer accepted).')">Proceed to Checkout</button>
+      <button type="button" onclick="alert('Proceeding to Bhutan Wholesale Checkout via M-BoB / B-Mobile.')" style="background:#0284c7; color:#fff; border:none; padding:12px; border-radius:4px; font-weight:800; cursor:pointer;">
+        Proceed to Checkout
+      </button>
     </div>
   </aside>
 
   <!-- FOOTER -->
-  <footer class="mart-footer">
+  <footer class="mart-footer-section">
     <div class="container">
-      <div class="mart-footer-grid">
-        <!-- Col 1 -->
+      <div class="mart-footer-columns">
         <div>
-          <div class="mart-logo" style="margin-bottom: 14px;">
-            <div class="mart-logo-text">
-              <span class="mart-brand-title" style="color:#ffffff;">BHUTAN <span style="color:#f97316;">GLOBAL MART</span></span>
-              <span class="mart-brand-sub" style="color:#94a3b8;">Global Products &bull; Local Support</span>
-            </div>
-          </div>
-          <p style="font-size: 0.82rem; line-height: 1.6; color: #94a3b8; margin-bottom: 14px;">
-            Connecting Bhutanese shoppers and businesses directly with wholesale supply chains across China, USA and international logistics networks.
+          <img src="assets/footer-logo.jpg" alt="Bhutan Global Mart Footer Logo" style="height:36px; margin-bottom:10px;">
+          <p style="font-size:0.78rem; color:#94a3b8; line-height:1.5;">
+            Global Products &bull; Local Support. Connecting Bhutan directly with factories and distribution centers worldwide.
           </p>
-          <div class="header-social-row">
-            <a href="#" class="header-social-btn tiktok"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .58.04.85.12V9.4a6.33 6.33 0 0 0-.85-.06A6.34 6.34 0 0 0 3 15.68a6.34 6.34 0 0 0 10.82 4.48 6.3 6.3 0 0 0 1.87-4.49V8.65a8.28 8.28 0 0 0 4.9 1.58V6.78a4.83 4.83 0 0 1-1-.09z"/></svg></a>
-            <a href="#" class="header-social-btn fb"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-            <a href="#" class="header-social-btn ig"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path></svg></a>
-            <a href="#" class="header-social-btn yt"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33zM9.75 15.02V8.48l5.75 3.27-5.75 3.27z"/></svg></a>
-          </div>
         </div>
 
-        <!-- Col 2: Quick Links -->
         <div>
-          <h4 class="footer-col-title">Quick Links</h4>
-          <ul class="footer-link-list">
+          <h4 class="mart-footer-title">Quick Links</h4>
+          <ul class="mart-footer-links-list">
             <li><a href="index.html">Home</a></li>
-            <li><a href="shop.html">Shop Wholesale</a></li>
+            <li><a href="shop.html">Shop</a></li>
             <li><a href="#about">About Us</a></li>
-            <li><a href="#farm-brokerage">Farm Brokerage</a></li>
-            <li><a href="#featured-products">FAQ &amp; Buying Guide</a></li>
+            <li><a href="#farmBrokerage">Farm Brokerage</a></li>
+            <li><a href="#featuredProducts">FAQ</a></li>
           </ul>
         </div>
 
-        <!-- Col 3: Customer Service -->
         <div>
-          <h4 class="footer-col-title">Customer Service</h4>
-          <ul class="footer-link-list">
-            <li><a href="#" onclick="alert('Enter tracking ID starting with BGM-BT-...')">Track Order</a></li>
-            <li><a href="#">Shipping Policy to Bhutan</a></li>
-            <li><a href="#">Return &amp; Refund Guarantee</a></li>
-            <li><a href="#">Terms &amp; Wholesale Conditions</a></li>
-            <li><a href="#">Privacy &amp; Data Security</a></li>
+          <h4 class="mart-footer-title">Customer Service</h4>
+          <ul class="mart-footer-links-list">
+            <li><a href="#">Track Order</a></li>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="#">Return &amp; Refund</a></li>
+            <li><a href="#">Terms &amp; Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
           </ul>
         </div>
 
-        <!-- Col 4: Contact Us & Payment -->
         <div>
-          <h4 class="footer-col-title">Contact Us</h4>
-          <ul class="footer-link-list">
+          <h4 class="mart-footer-title">Contact Us</h4>
+          <ul class="mart-footer-links-list">
             <li>📞 +975 17 123456 / 17654321</li>
             <li>✉️ info@bhutanglobalmart.bt</li>
-            <li>📍 Norzin Lam, Thimphu, Bhutan</li>
+            <li>📍 Thimphu, Bhutan</li>
           </ul>
-
-          <div style="margin-top: 18px;">
-            <span style="font-size: 0.76rem; color: #94a3b8; display: block; margin-bottom: 6px;">We Accept</span>
-            <div class="payment-badges-row">
-              <span class="payment-badge" style="color: #1a1f71;">VISA</span>
-              <span class="payment-badge" style="color: #eb001b;">Mastercard</span>
-              <span class="payment-badge" style="color: #003087;">PayPal</span>
-              <span class="payment-badge" style="color: #635bff;">stripe</span>
+          <div style="margin-top:12px;">
+            <span style="font-size:0.7rem; color:#94a3b8; display:block; margin-bottom:4px;">We Accept:</span>
+            <div style="display:flex; gap:6px; font-size:0.7rem; font-weight:800; color:#0f172a;">
+              <span style="background:#fff; padding:2px 6px; border-radius:2px;">VISA</span>
+              <span style="background:#fff; padding:2px 6px; border-radius:2px;">MasterCard</span>
+              <span style="background:#fff; padding:2px 6px; border-radius:2px;">PayPal</span>
+              <span style="background:#fff; padding:2px 6px; border-radius:2px;">Stripe</span>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Bottom bar with Dzongkha Script -->
-      <div class="mart-footer-bottom">
-        <div>
-          &copy; 2026 Bhutan Global Mart. All rights reserved. | A Bhutanese Company Connecting You to the World.
-        </div>
-        <div class="dzongkha-script">
-          གཉུག་མའི་ མཛངས་ཤེས་དྲེ་ལས་བྱུང་།
-        </div>
+      <div class="mart-footer-bottom-line">
+        <div>&copy; 2026 Bhutan Global Mart. All rights reserved. | A Bhutanese Company Connecting You to the World.</div>
+        <div class="dzongkha-footer-script">གཉུག་མའི་ མཛངས་ཤེས་དྲེ་ལས་བྱུང་།</div>
       </div>
     </div>
   </footer>
 
-  <!-- NATIVE MODAL 1: VIDEO PLAYER MODAL -->
+  <!-- NATIVE VIDEO MODAL -->
   <dialog id="videoModal" aria-labelledby="videoModalTitle">
-    <div style="background:#0284c7; color:#fff; padding:14px 20px; display:flex; justify-content:space-between; align-items:center;">
-      <h3 id="videoModalTitle" style="font-size:1.05rem; font-weight:700;">Product Verification Video</h3>
+    <div style="background:#0284c7; color:#fff; padding:12px 18px; display:flex; justify-content:space-between; align-items:center;">
+      <span id="videoModalTitle" style="font-weight:700; font-size:0.95rem;">Product Video Review</span>
       <button type="button" data-close-modal="videoModal" style="background:none; border:none; color:#fff; font-size:1.2rem; cursor:pointer;">✕</button>
     </div>
-    <div class="modal-body" id="videoPlayerSimulation">
-      <!-- Injected by main.js -->
-    </div>
+    <div id="videoPlayerSimulation" style="padding:20px;"></div>
   </dialog>
 
-  <!-- NATIVE MODAL 2: FARM TOUR MODAL -->
+  <!-- NATIVE FARM MODAL -->
   <dialog id="farmModal" aria-labelledby="farmModalTitle">
-    <div style="background:#15803d; color:#fff; padding:14px 20px; display:flex; justify-content:space-between; align-items:center;">
-      <h3 id="farmModalTitle" style="font-size:1.05rem; font-weight:700;">Farm Land Details</h3>
+    <div style="background:#15803d; color:#fff; padding:12px 18px; display:flex; justify-content:space-between; align-items:center;">
+      <span id="farmModalTitle" style="font-weight:700; font-size:0.95rem;">Farmland Virtual Inspection</span>
       <button type="button" data-close-modal="farmModal" style="background:none; border:none; color:#fff; font-size:1.2rem; cursor:pointer;">✕</button>
     </div>
-    <div class="modal-body">
+    <div style="padding:20px;">
       <div id="farmModalContent"></div>
-      <form style="margin-top:16px; border-top:1px solid #e2e8f0; padding-top:14px;" onsubmit="event.preventDefault(); alert('Inquiry sent to Bhutan Farm Brokerage Officer. We will contact you with deed abstracts.'); document.getElementById('farmModal').close();">
-        <h4 style="font-size:0.95rem; font-weight:800; color:#15803d; margin-bottom:10px;">Request Private Site Inspection</h4>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:10px;">
-          <input type="text" placeholder="Your Name" style="padding:8px 12px; border:1px solid #cbd5e1; border-radius:4px; font-size:0.85rem;" required>
-          <input type="tel" placeholder="Phone (+975...)" style="padding:8px 12px; border:1px solid #cbd5e1; border-radius:4px; font-size:0.85rem;" required>
-        </div>
-        <button type="submit" style="width:100%; background:#15803d; color:#fff; padding:10px; border:none; border-radius:4px; font-weight:700; cursor:pointer;">Submit Farm Inquiry</button>
-      </form>
-    </div>
-  </dialog>
-
-  <!-- NATIVE MODAL 3: BULK WHOLESALE INQUIRY -->
-  <dialog id="bulkModal" aria-labelledby="bulkModalTitle">
-    <div style="background:#059669; color:#fff; padding:14px 20px; display:flex; justify-content:space-between; align-items:center;">
-      <h3 id="bulkModalTitle" style="font-size:1.05rem; font-weight:700;">Bulk Wholesale Sourcing Desk</h3>
-      <button type="button" data-close-modal="bulkModal" style="background:none; border:none; color:#fff; font-size:1.2rem; cursor:pointer;">✕</button>
-    </div>
-    <div class="modal-body">
-      <p style="font-size:0.85rem; color:#475569; margin-bottom:14px;">
-        Importing containers or palletized cargo from Guangzhou, Yiwu, Shenzhen or US distribution centers? We coordinate manufacturer inspections, shipping to Kolkata port, and customs clearance via Phuentsholing into Bhutan.
-      </p>
-      <form onsubmit="event.preventDefault(); alert('Wholesale quotation dispatched to logistics team.'); document.getElementById('bulkModal').close();">
-        <div style="margin-bottom:10px;">
-          <input type="text" placeholder="Product Category / Target Item" style="width:100%; padding:8px 12px; border:1px solid #cbd5e1; border-radius:4px;" required>
-        </div>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:12px;">
-          <input type="number" placeholder="Estimated Quantity (MOQ)" style="padding:8px 12px; border:1px solid #cbd5e1; border-radius:4px;" required>
-          <input type="tel" placeholder="Your Phone Number" style="padding:8px 12px; border:1px solid #cbd5e1; border-radius:4px;" required>
-        </div>
-        <button type="submit" style="width:100%; background:#059669; color:#fff; padding:10px; border:none; border-radius:4px; font-weight:800; cursor:pointer;">Get Direct Wholesale Quote</button>
-      </form>
     </div>
   </dialog>
 
   <script src="js/main.js"></script>
   <script>
-    function openBulkModal() {
-      document.getElementById('bulkModal')?.showModal();
-    }
-
     function filterByCategory(cat) {
-      const cards = document.querySelectorAll('#featuredProductsGrid .product-card');
-      cards.forEach(card => {
-        if (cat === 'All' || card.getAttribute('data-category') === cat) {
-          card.style.display = 'flex';
+      const items = document.querySelectorAll('#featuredGrid .product-item-card');
+      items.forEach(item => {
+        if (cat === 'All' || item.getAttribute('data-category') === cat) {
+          item.style.display = 'flex';
         } else {
-          card.style.display = 'none';
+          item.style.display = 'none';
         }
       });
-      document.getElementById('featured-products').scrollIntoView({behavior: 'smooth'});
+      document.getElementById('featuredProducts').scrollIntoView({behavior:'smooth'});
     }
 
     function performStoreSearch() {
-      const q = document.getElementById('mainSearchInput').value.toLowerCase().trim();
+      const q = document.getElementById('storeSearchInput').value.toLowerCase().trim();
       if (!q) return;
-      const cards = document.querySelectorAll('#featuredProductsGrid .product-card');
-      let found = false;
-      cards.forEach(card => {
-        const text = card.textContent.toLowerCase();
-        if (text.includes(q)) {
-          card.style.display = 'flex';
-          found = true;
-        } else {
-          card.style.display = 'none';
-        }
+      const items = document.querySelectorAll('#featuredGrid .product-item-card');
+      items.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        item.style.display = text.includes(q) ? 'flex' : 'none';
       });
-      document.getElementById('featured-products').scrollIntoView({behavior: 'smooth'});
-      if (!found) {
-        alert(`No direct catalog matches found for "${q}". Our AI Assistant can source it directly from Alibaba or AliExpress for you!`);
-      }
+      document.getElementById('featuredProducts').scrollIntoView({behavior:'smooth'});
     }
   </script>
 </body>
