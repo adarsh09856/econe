@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farm Brokerage Bhutan | Agricultural Land & Orchard Investment</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body style="background: #fbfdfc;">
+
+  <!-- Header -->
+  <nav class="mart-header" style="border-bottom: 2px solid #bbf7d0;">
+    <div class="container">
+      <div class="mart-header-wrap">
+        <a href="index.html" class="mart-logo">
+          <div class="mart-logo-text">
+            <span class="mart-brand-title" style="color: #15803d;">BHUTAN <span>FARM BROKERAGE</span></span>
+            <span class="mart-brand-sub" style="color: #166534;">Invest in Bhutan's Natural Organic Beauty</span>
+          </div>
+        </a>
+        <div style="display: flex; gap: 20px; font-weight: 700; font-size: 0.9rem; align-items: center;">
+          <a href="index.html">← Back to Global Mart</a>
+          <a href="shop.html">Shop Wholesale</a>
+          <button type="button" class="btn-enquire-farm" style="padding: 8px 16px; background: #15803d; color: #fff;" onclick="document.getElementById('farmContactSection').scrollIntoView({behavior:'smooth'})">
+            List Your Farm
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, rgba(22, 101, 52, 0.92) 0%, rgba(21, 128, 61, 0.75) 100%), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80') center center / cover no-repeat; color: #fff; padding: 60px 0; text-align: center;">
+    <div class="container">
+      <span style="font-size: 0.95rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; color: #bbf7d0; display: block; margin-bottom: 8px;">NLCS Registered &amp; Verified</span>
+      <h1 style="font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 900; margin-bottom: 14px;">Bhutan Farm Land &amp; Organic Estate Brokerage</h1>
+      <p style="max-width: 680px; margin: 0 auto 24px; color: #dcfce7; font-size: 1.05rem; line-height: 1.6;">
+        Buy, sell, or lease verified Kamzhing (dryland) and Chhuzhing (wetland) agricultural properties across Paro, Thimphu, Punakha and Wangdue with drone land surveys and legal assistance.
+      </p>
+    </div>
+  </section>
+
+  <!-- Curated Farm Listings -->
+  <section class="mart-section">
+    <div class="container">
+      <div class="mart-section-head">
+        <div>
+          <h2 class="mart-section-title" style="color: #166534;">Verified Farmland Listings in Bhutan</h2>
+          <p style="font-size: 0.88rem; color: #64748b;">Every listing includes official Lagthram verification, soil fertility index, and water right credentials.</p>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
+        <!-- Farm 1 -->
+        <article class="farm-card" style="box-shadow: 0 4px 15px rgba(0,0,0,0.06);">
+          <div class="farm-thumb-wrap" style="height: 180px;">
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600&q=80" alt="Apple Farm Paro">
+            <div class="farm-play-badge">▶</div>
+          </div>
+          <div class="farm-body" style="padding: 18px;">
+            <span style="font-size: 0.72rem; font-weight: 800; color: #15803d; text-transform: uppercase;">Paro Dzongkhag &bull; High Value Horticulture</span>
+            <h3 style="font-size: 1.15rem; font-weight: 800; color: #0f172a; margin: 4px 0 8px;">Organic Apple Orchard &amp; Homestead</h3>
+            <p style="font-size: 0.82rem; color: #475569; margin-bottom: 12px;">15 Acres of mature Royal Delicious apple trees with micro-sprinkler irrigation and mountain stream rights.</p>
+            <div style="font-size: 1.25rem; font-weight: 900; color: #166534; margin-bottom: 14px;">Nu. 8,000,000 &ndash; 12,000,000</div>
+            <button type="button" class="btn-watch-farm-video" style="padding: 8px; font-size: 0.82rem;" onclick="openFarmTour('Organic Apple Orchard', 'Paro Valley', '15 Acres', 'Nu. 8M – 12M')">
+              <span>📹 Watch 4K Video Tour &amp; Survey</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Farm 2 -->
+        <article class="farm-card" style="box-shadow: 0 4px 15px rgba(0,0,0,0.06);">
+          <div class="farm-thumb-wrap" style="height: 180px;">
+            <img src="https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?auto=format&fit=crop&w=600&q=80" alt="Vegetable Farm Thimphu">
+            <div class="farm-play-badge">▶</div>
+          </div>
+          <div class="farm-body" style="padding: 18px;">
+            <span style="font-size: 0.72rem; font-weight: 800; color: #15803d; text-transform: uppercase;">Thimphu North &bull; Greenhouse Farming</span>
+            <h3 style="font-size: 1.15rem; font-weight: 800; color: #0f172a; margin: 4px 0 8px;">Commercial Vegetable &amp; Strawberry Farm</h3>
+            <p style="font-size: 0.82rem; color: #475569; margin-bottom: 12px;">8 Acres equipped with 4 poly-tunnel greenhouses, farm road access, and direct produce contract to Centenary Farmers Market.</p>
+            <div style="font-size: 1.25rem; font-weight: 900; color: #166534; margin-bottom: 14px;">Nu. 5,000,000 &ndash; 8,000,000</div>
+            <button type="button" class="btn-watch-farm-video" style="padding: 8px; font-size: 0.82rem;" onclick="openFarmTour('Vegetable Farm', 'North Thimphu', '8 Acres', 'Nu. 5M – 8M')">
+              <span>📹 Watch 4K Video Tour &amp; Survey</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Farm 3 -->
+        <article class="farm-card" style="box-shadow: 0 4px 15px rgba(0,0,0,0.06);">
+          <div class="farm-thumb-wrap" style="height: 180px;">
+            <img src="https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?auto=format&fit=crop&w=600&q=80" alt="Dairy Farm Punakha">
+            <div class="farm-play-badge">▶</div>
+          </div>
+          <div class="farm-body" style="padding: 18px;">
+            <span style="font-size: 0.72rem; font-weight: 800; color: #15803d; text-transform: uppercase;">Punakha Sub-tropical &bull; Dairy &amp; Fodder</span>
+            <h3 style="font-size: 1.15rem; font-weight: 800; color: #0f172a; margin: 4px 0 8px;">Punakha Riverfront Dairy &amp; Rice Terraces</h3>
+            <p style="font-size: 0.82rem; color: #475569; margin-bottom: 12px;">20 Acres with Mo Chhu river access, Jersey cattle barn, silage pit, and organic paddy fields.</p>
+            <div style="font-size: 1.25rem; font-weight: 900; color: #166534; margin-bottom: 14px;">Nu. 12,000,000 &ndash; 18,000,000</div>
+            <button type="button" class="btn-watch-farm-video" style="padding: 8px; font-size: 0.82rem;" onclick="openFarmTour('Dairy Farm', 'Punakha Valley', '20 Acres', 'Nu. 12M – 18M')">
+              <span>📹 Watch 4K Video Tour &amp; Survey</span>
+            </button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Legal Assistance Section -->
+  <section class="mart-section" id="farmContactSection" style="background: #f0fdf4; border-top: 1px solid #bbf7d0;">
+    <div class="container" style="max-width: 700px;">
+      <div style="background: #fff; border: 1px solid #bbf7d0; border-radius: var(--radius-md); padding: 32px; box-shadow: var(--shadow-md);">
+        <h2 style="font-size: 1.4rem; font-weight: 900; color: #166534; margin-bottom: 8px; text-align: center;">Farmland Brokerage &amp; NLCS Registration Assistance</h2>
+        <p style="font-size: 0.88rem; color: #475569; text-align: center; margin-bottom: 24px;">Looking to acquire or lease farmland in Bhutan? Connect with our licensed land conveyancer.</p>
+        
+        <form onsubmit="event.preventDefault(); alert('Your farm brokerage inquiry has been assigned to our Thimphu property registrar.');">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px;">
+            <input type="text" placeholder="Full Name" style="padding: 10px 14px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.88rem;" required>
+            <input type="tel" placeholder="Phone Number" style="padding: 10px 14px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.88rem;" required>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px;">
+            <select style="padding: 10px 14px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.88rem;" required>
+              <option value="" disabled selected>Target Dzongkhag</option>
+              <option>Paro</option>
+              <option>Thimphu</option>
+              <option>Punakha</option>
+              <option>Wangdue Phodrang</option>
+              <option>Chukha</option>
+              <option>Sarpang / Gelephu</option>
+            </select>
+            <select style="padding: 10px 14px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.88rem;" required>
+              <option value="" disabled selected>Intent</option>
+              <option>Buy Farmland</option>
+              <option>Sell Farmland</option>
+              <option>Long-Term Agricultural Lease</option>
+            </select>
+          </div>
+          <button type="submit" style="width: 100%; background: #15803d; color: #fff; padding: 12px; border: none; border-radius: 6px; font-weight: 800; font-size: 1rem; cursor: pointer;">
+            Submit Brokerage Request
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Native Modal -->
+  <dialog id="farmModal" aria-labelledby="farmModalTitle">
+    <div style="background:#15803d; color:#fff; padding:14px 20px; display:flex; justify-content:space-between; align-items:center;">
+      <h3 id="farmModalTitle" style="font-size:1.05rem; font-weight:700;">Farm Land Details</h3>
+      <button type="button" data-close-modal="farmModal" style="background:none; border:none; color:#fff; font-size:1.2rem; cursor:pointer;">✕</button>
+    </div>
+    <div class="modal-body" style="padding: 20px;">
+      <div id="farmModalContent"></div>
+    </div>
+  </dialog>
+
+  <footer class="mart-footer" style="padding: 24px 0; text-align: center; font-size: 0.85rem;">
+    <div class="container">
+      <p>&copy; 2026 Bhutan Global Mart - Farm Brokerage Division. Thimphu, Kingdom of Bhutan.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
