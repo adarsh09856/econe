@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frequently Asked Questions (FAQ) | Bhutan Global Mart</title>
+  <meta name="description" content="Answers to common questions about buying from Alibaba, AliExpress and Amazon to Bhutan, shipping times, customs duty and payment methods.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header class="mart-top-bar">
+    <div class="container">
+      <div class="sourcing-partners-text">
+        <span>Global Products &nbsp;|&nbsp; Wholesale Prices &nbsp;|&nbsp; Trusted Sourcing:</span>
+        <div class="sourcing-partner-links">
+          <a href="https://www.alibaba.com" target="_blank" rel="noopener">Alibaba</a>
+          <span>|</span>
+          <a href="https://www.aliexpress.com" target="_blank" rel="noopener">AliExpress</a>
+          <span>|</span>
+          <a href="https://www.amazon.com" target="_blank" rel="noopener">Amazon</a>
+        </div>
+      </div>
+
+      <div class="top-bar-right-controls">
+        <select class="currency-select-box" id="currencySelector" aria-label="Currency Selector">
+          <option value="USD">🇺🇸 USD ($)</option>
+          <option value="BTN">🇧🇹 BTN (Nu.)</option>
+          <option value="INR">🇮🇳 INR (₹)</option>
+        </select>
+
+        <select class="lang-select-box" aria-label="Language Selector">
+          <option>English</option>
+          <option>Dzongkha</option>
+        </select>
+
+        <div class="user-nav-links">
+          <button type="button" class="user-nav-item" onclick="alert('Account login portal')">
+            <span>👤 My Account</span>
+          </button>
+          <button type="button" class="user-nav-item" id="wishlistTrigger">
+            <span>🤍 Wishlist</span>
+            <span class="counter-badge" id="wishlistCountBadge">0</span>
+          </button>
+          <button type="button" class="user-nav-item" id="cartTrigger">
+            <span>🛒 Cart</span>
+            <span class="counter-badge" id="cartCountBadge">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN NAVIGATION & SEARCH -->
+  <nav class="mart-main-header">
+    <div class="container mart-header-row">
+      <a href="index.html" class="mart-site-logo">
+        <img src="assets/logo.jpg" alt="Bhutan Global Mart Logo" class="mart-logo-img">
+      </a>
+
+      <div class="search-category-combo">
+        <button type="button" class="btn-all-categories-head" onclick="location.href='shop.html'">
+          <span>☰ All Categories</span>
+        </button>
+        <input type="search" class="search-field-input" placeholder="Search for products, brands, categories...">
+        <button type="button" class="btn-search-icon-submit" onclick="location.href='shop.html'" aria-label="Search Catalog">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+      </div>
+
+      <div class="header-social-channels">
+        <span class="social-watch-text">Follow us &amp; Watch Product Videos</span>
+        <div class="social-pills-row">
+          <a href="#" class="social-pill-icon tiktok" title="TikTok"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .58.04.85.12V9.4a6.33 6.33 0 0 0-.85-.06A6.34 6.34 0 0 0 3 15.68a6.34 6.34 0 0 0 10.82 4.48 6.3 6.3 0 0 0 1.87-4.49V8.65a8.28 8.28 0 0 0 4.9 1.58V6.78a4.83 4.83 0 0 1-1-.09z"/></svg></a>
+          <a href="#" class="social-pill-icon fb" title="Facebook"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" class="social-pill-icon ig" title="Instagram"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path></svg></a>
+          <a href="#" class="social-circle yt" title="YouTube"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33zM9.75 15.02V8.48l5.75 3.27-5.75 3.27z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SUBPAGE HERO BANNER -->
+  <section class="subpage-mart-hero">
+    <div class="container">
+      <span class="subpage-mart-tagline">Help &amp; Knowledge Base</span>
+      <h1 class="subpage-mart-title">Frequently Asked Questions</h1>
+      <p class="subpage-mart-desc">
+        Everything you need to know about purchasing international products, customs clearance into Bhutan, shipping durations, and local currency payment.
+      </p>
+      <div class="subpage-mart-breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>FAQ &amp; Help</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ ACCORDION LIST -->
+  <section style="padding: 50px 0 65px; background: #f8fafc;">
+    <div class="container">
+      <div class="faq-container-narrow">
+        <!-- 1 -->
+        <div class="faq-card-item active">
+          <button type="button" class="faq-question-button" onclick="toggleFaq(this)">
+            How does Bhutan Global Mart ship products from Alibaba, AliExpress and Amazon to Bhutan?
+          </button>
+          <div class="faq-answer-panel">
+            We operate consolidated trans-shipment hubs in Guangzhou, Yiwu, and Kolkata. When you order through our platform, shipments are pooled into consolidated freight containers and transported overland through the Phuentsholing Dry Port customs checkpoint directly to our Thimphu distribution counter.
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="faq-card-item">
+          <button type="button" class="faq-question-button" onclick="toggleFaq(this)">
+            Can I pay in Bhutanese Ngultrum (Nu.) instead of US Dollars?
+          </button>
+          <div class="faq-answer-panel">
+            Yes! That is one of our primary advantages. You do not need an international forex card with RMA limits. You can pay seamlessly in BTN (Nu.) via local mobile banking (mBoB, B-Mobile, Druk PNB, BNB) or bank deposit. We handle all overseas currency exchange.
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="faq-card-item">
+          <button type="button" class="faq-question-button" onclick="toggleFaq(this)">
+            What about Department of Revenue &amp; Customs (DRC) duties and sales tax?
+          </button>
+          <div class="faq-answer-panel">
+            All prices quoted via our landed cost calculator include applicable Bhutan Customs tariffs and Bhutan Goods and Services Tax (BST). There are zero surprise fees upon parcel collection at our Thimphu hub.
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="faq-card-item">
+          <button type="button" class="faq-question-button" onclick="toggleFaq(this)">
+            What is the typical shipping duration from factory to Thimphu?
+          </button>
+          <div class="faq-answer-panel">
+            Standard Air Express consolidated freight arrives within 10 to 14 business days from supplier dispatch. Bulk sea/rail container orders from Alibaba take 25 to 35 days and offer the deepest freight savings.
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="faq-card-item">
+          <button type="button" class="faq-question-button" onclick="toggleFaq(this)">
+            What is MOQ and can I negotiate smaller quantities?
+          </button>
+          <div class="faq-answer-panel">
+            MOQ stands for Minimum Order Quantity required by manufacturers. Our interactive AI assistant and wholesale brokers can often negotiate smaller sample MOQs or bundle your order with other Bhutanese merchants ordering the same inventory.
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="faq-card-item">
+          <button type="button" class="faq-question-button" onclick="toggleFaq(this)">
+            How does the Farmland Brokerage service work?
+          </button>
+          <div class="faq-answer-panel">
+            Our farmland desk showcases legally verified agricultural lands across Paro, Thimphu, Punakha and Wangdue. We arrange 4K drone video tours, inspect land titles (Thram) with the National Land Commission, and handle all legal conveyance and sale deed drafting under Bhutanese law.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="mart-footer-section">
+    <div class="container">
+      <div class="mart-footer-columns">
+        <div>
+          <img src="assets/footer-logo.jpg" alt="Bhutan Global Mart Footer Logo" style="height:36px; margin-bottom:10px;">
+          <p style="font-size:0.78rem; color:#94a3b8; line-height:1.5;">
+            Global Products &bull; Local Support. Connecting Bhutan directly with factories and distribution centers worldwide.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="mart-footer-title">Quick Links</h4>
+          <ul class="mart-footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop Catalog</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="farm-brokerage.html">Farm Brokerage</a></li>
+            <li><a href="faq.html">FAQ &amp; Help</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="mart-footer-title">Customer Service</h4>
+          <ul class="mart-footer-links-list">
+            <li><a href="contact.html">Track Order &amp; Support</a></li>
+            <li><a href="faq.html#shipping">Shipping to Bhutan</a></li>
+            <li><a href="faq.html#returns">Return &amp; Refund</a></li>
+            <li><a href="contact.html">Contact Office</a></li>
+            <li><a href="faq.html">Wholesale Terms</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="mart-footer-title">Contact Us</h4>
+          <ul class="mart-footer-links-list">
+            <li>📞 +975 17 123456 / 17654321</li>
+            <li>✉️ info@bhutanglobalmart.bt</li>
+            <li>📍 Thimphu, Bhutan</li>
+          </ul>
+          <div style="margin-top:12px;">
+            <span style="font-size:0.7rem; color:#94a3b8; display:block; margin-bottom:4px;">We Accept:</span>
+            <div style="display:flex; gap:6px; font-size:0.7rem; font-weight:800; color:#0f172a;">
+              <span style="background:#fff; padding:2px 6px; border-radius:2px;">VISA</span>
+              <span style="background:#fff; padding:2px 6px; border-radius:2px;">MasterCard</span>
+              <span style="background:#fff; padding:2px 6px; border-radius:2px;">PayPal</span>
+              <span style="background:#fff; padding:2px 6px; border-radius:2px;">Stripe</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mart-footer-bottom-line">
+        <div>&copy; 2026 Bhutan Global Mart. All rights reserved. | A Bhutanese Company Connecting You to the World.</div>
+        <div class="dzongkha-footer-script">གཉུག་མའི་ མཛངས་ཤེས་དྲེ་ལས་བྱུང་།</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function toggleFaq(btn) {
+      const card = btn.closest('.faq-card-item');
+      card.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

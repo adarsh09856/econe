@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &amp; Customer Support | Bhutan Global Mart</title>
+  <meta name="description" content="Contact Bhutan Global Mart for wholesale order assistance, parcel tracking, Farmland brokerage, or visit our Thimphu distribution counter.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header class="mart-top-bar">
+    <div class="container">
+      <div class="sourcing-partners-text">
+        <span>Global Products &nbsp;|&nbsp; Wholesale Prices &nbsp;|&nbsp; Trusted Sourcing:</span>
+        <div class="sourcing-partner-links">
+          <a href="https://www.alibaba.com" target="_blank" rel="noopener">Alibaba</a>
+          <span>|</span>
+          <a href="https://www.aliexpress.com" target="_blank" rel="noopener">AliExpress</a>
+          <span>|</span>
+          <a href="https://www.amazon.com" target="_blank" rel="noopener">Amazon</a>
+        </div>
+      </div>
+
+      <div class="top-bar-right-controls">
+        <select class="currency-select-box" id="currencySelector" aria-label="Currency Selector">
+          <option value="USD">🇺🇸 USD ($)</option>
+          <option value="BTN">🇧🇹 BTN (Nu.)</option>
+          <option value="INR">🇮🇳 INR (₹)</option>
+        </select>
+
+        <select class="lang-select-box" aria-label="Language Selector">
+          <option>English</option>
+          <option>Dzongkha</option>
+        </select>
+
+        <div class="user-nav-links">
+          <button type="button" class="user-nav-item" onclick="alert('Account login portal')">
+            <span>👤 My Account</span>
+          </button>
+          <button type="button" class="user-nav-item" id="wishlistTrigger">
+            <span>🤍 Wishlist</span>
+            <span class="counter-badge" id="wishlistCountBadge">0</span>
+          </button>
+          <button type="button" class="user-nav-item" id="cartTrigger">
+            <span>🛒 Cart</span>
+            <span class="counter-badge" id="cartCountBadge">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN NAVIGATION & SEARCH -->
+  <nav class="mart-main-header">
+    <div class="container mart-header-row">
+      <a href="index.html" class="mart-site-logo">
+        <img src="assets/logo.jpg" alt="Bhutan Global Mart Logo" class="mart-logo-img">
+      </a>
+
+      <div class="search-category-combo">
+        <button type="button" class="btn-all-categories-head" onclick="location.href='shop.html'">
+          <span>☰ All Categories</span>
+        </button>
+        <input type="search" class="search-field-input" placeholder="Search for products, brands, categories...">
+        <button type="button" class="btn-search-icon-submit" onclick="location.href='shop.html'" aria-label="Search Catalog">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+      </div>
+
+      <div class="header-social-channels">
+        <span class="social-watch-text">Follow us &amp; Watch Product Videos</span>
+        <div class="social-pills-row">
+          <a href="#" class="social-pill-icon tiktok" title="TikTok"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .58.04.85.12V9.4a6.33 6.33 0 0 0-.85-.06A6.34 6.34 0 0 0 3 15.68a6.34 6.34 0 0 0 10.82 4.48 6.3 6.3 0 0 0 1.87-4.49V8.65a8.28 8.28 0 0 0 4.9 1.58V6.78a4.83 4.83 0 0 1-1-.09z"/></svg></a>
+          <a href="#" class="social-pill-icon fb" title="Facebook"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" class="social-pill-icon ig" title="Instagram"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path></svg></a>
+          <a href="#" class="social-circle yt" title="YouTube"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33zM9.75 15.02V8.48l5.75 3.27-5.75 3.27z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SUBPAGE HERO BANNER -->
+  <section class="subpage-mart-hero">
+    <div class="container">
+      <span class="subpage-mart-tagline">We Are Ready to Assist You</span>
+      <h1 class="subpage-mart-title">Contact &amp; Customer Support</h1>
+      <p class="subpage-mart-desc">
+        Need assistance with bulk MOQ quotes, tracking international freight into Bhutan, or scheduling a farmland survey? Reach our team in Thimphu.
+      </p>
+      <div class="subpage-mart-breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>Contact Us</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTACT CHANNELS -->
+  <section style="padding: 50px 0 60px; background: #ffffff;">
+    <div class="container">
+      <div class="partner-showcase-grid" style="margin-top: 0; margin-bottom: 35px;">
+        <div class="partner-box-card" style="text-align: left; padding: 26px;">
+          <div class="partner-icon-large">📞</div>
+          <h3 class="partner-box-title">Phone &amp; WhatsApp</h3>
+          <p class="partner-box-desc" style="font-size: 0.88rem; color: #334155; line-height: 1.6;">
+            Customer Support: <a href="tel:+97517123456" style="color:#0284c7; font-weight:700;">+975 17 123456</a><br>
+            Wholesale Desk: <a href="tel:+97517654321" style="color:#0284c7; font-weight:700;">+975 17 654321</a><br>
+            Phuentsholing Logistics: <a href="tel:+97505252888" style="color:#0284c7; font-weight:700;">+975 05 252888</a>
+          </p>
+        </div>
+
+        <div class="partner-box-card" style="text-align: left; padding: 26px;">
+          <div class="partner-icon-large">✉️</div>
+          <h3 class="partner-box-title">Direct Inquiries</h3>
+          <p class="partner-box-desc" style="font-size: 0.88rem; color: #334155; line-height: 1.6;">
+            General Info: <a href="mailto:info@bhutanglobalmart.bt" style="color:#0284c7; font-weight:700;">info@bhutanglobalmart.bt</a><br>
+            Bulk Orders: <a href="mailto:wholesale@bhutanglobalmart.bt" style="color:#0284c7; font-weight:700;">wholesale@bhutanglobalmart.bt</a><br>
+            Farmland Brokerage: <a href="mailto:land@bhutanglobalmart.bt" style="color:#0284c7; font-weight:700;">land@bhutanglobalmart.bt</a>
+          </p>
+        </div>
+
+        <div class="partner-box-card" style="text-align: left; padding: 26px;">
+          <div class="partner-icon-large">📍</div>
+          <h3 class="partner-box-title">Thimphu Collection Hub</h3>
+          <p class="partner-box-desc" style="font-size: 0.88rem; color: #334155; line-height: 1.6;">
+            Level 2, Changzamtog Commercial Complex<br>
+            Near Expressway Bridge<br>
+            Thimphu, Kingdom of Bhutan
+          </p>
+        </div>
+      </div>
+
+      <!-- Form & Tracking Split -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+        <!-- Left: Form -->
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.04);">
+          <h2 style="font-size: 1.35rem; font-weight: 800; color: #0f172a; margin-bottom: 8px;">Customer Inquiry &amp; RFQ Form</h2>
+          <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 20px;">
+            Submit your wholesale order inquiry or product link from Alibaba/Amazon for a landed Bhutan quote.
+          </p>
+
+          <form id="globalContactForm" style="display: flex; flex-direction: column; gap: 12px;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+              <input type="text" placeholder="Full Name" style="padding: 10px 14px; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 0.85rem;" required>
+              <input type="tel" placeholder="Phone Number" style="padding: 10px 14px; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 0.85rem;" required>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+              <input type="email" placeholder="Email Address" style="padding: 10px 14px; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 0.85rem;" required>
+              <select style="padding: 10px 14px; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 0.85rem;" required>
+                <option value="" disabled selected>Select Inquiry Type</option>
+                <option value="Wholesale Bulk Order">Wholesale Bulk Order &amp; MOQ</option>
+                <option value="Track Existing Parcel">Track Existing Parcel</option>
+                <option value="Product Sourcing Request">Sourcing Request (URL Link)</option>
+                <option value="Farmland Consultation">Farmland Consultation</option>
+              </select>
+            </div>
+            <textarea rows="4" placeholder="Paste product link or describe your wholesale requirements..." style="padding: 12px 14px; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 0.85rem; resize: vertical;" required></textarea>
+            <button type="submit" style="background: #0284c7; color: #fff; font-weight: 800; border: none; padding: 12px; border-radius: 4px; cursor: pointer; font-size: 0.95rem;">
+              Submit Inquiry &rarr;
+            </button>
+          </form>
+        </div>
+
+        <!-- Right: Order Tracking Box & Counter Timings -->
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+          <!-- Tracking Box -->
+          <div style="background: #07192d; color: #fff; border-radius: 8px; padding: 28px; border-left: 4px solid #f59e0b;">
+            <h3 style="font-size: 1.2rem; font-weight: 800; margin-bottom: 6px;">🔍 Track Your Overseas Shipment</h3>
+            <p style="font-size: 0.84rem; color: #cbd5e1; margin-bottom: 16px;">
+              Enter your BGM Tracking code (e.g., BGM-8821-BT) to check customs clearance status at Phuentsholing.
+            </p>
+            <div style="display: flex; gap: 8px;">
+              <input type="text" id="trackingCodeInput" placeholder="Enter BGM Tracking Code" style="flex:1; padding: 10px 12px; border-radius: 4px; border: none; font-size: 0.85rem; color: #0f172a;">
+              <button type="button" onclick="checkTracking()" style="background: #f59e0b; color: #07192d; font-weight: 800; border: none; padding: 0 18px; border-radius: 4px; cursor: pointer;">
+                Track
+              </button>
+            </div>
+            <div id="trackingResult" style="display: none; margin-top: 14px; padding: 12px; background: rgba(255,255,255,0.1); border-radius: 4px; font-size: 0.82rem; color: #facc15;">
+              ✓ Status: Cleared Phuentsholing Dry Port. In transit to Thimphu Distribution Center. Expected: 2 business days.
+            </div>
+          </div>
+
+          <!-- Counter Timings -->
+          <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 24px;">
+            <h4 style="font-size: 1.05rem; font-weight: 800; color: #0f172a; margin-bottom: 12px;">Thimphu Counter Operating Hours</h4>
+            <table class="hours-table" style="margin: 0;">
+              <tbody>
+                <tr>
+                  <td>Monday &ndash; Friday</td>
+                  <td style="text-align: right; font-weight: 700; color: #0284c7;">9:00 AM &ndash; 6:30 PM</td>
+                </tr>
+                <tr>
+                  <td>Saturday</td>
+                  <td style="text-align: right; font-weight: 700; color: #0284c7;">9:30 AM &ndash; 4:00 PM</td>
+                </tr>
+                <tr>
+                  <td>Sunday</td>
+                  <td style="text-align: right; font-weight: 700; color: #64748b;">Closed for Dispatch</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="mart-footer-section">
+    <div class="container">
+      <div class="mart-footer-columns">
+        <div>
+          <img src="assets/footer-logo.jpg" alt="Bhutan Global Mart Footer Logo" style="height:36px; margin-bottom:10px;">
+          <p style="font-size:0.78rem; color:#94a3b8; line-height:1.5;">
+            Global Products &bull; Local Support. Connecting Bhutan directly with factories and distribution centers worldwide.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="mart-footer-title">Quick Links</h4>
+          <ul class="mart-footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop Catalog</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="farm-brokerage.html">Farm Brokerage</a></li>
+            <li><a href="faq.html">FAQ &amp; Help</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="mart-footer-title">Customer Service</h4>
+          <ul class="mart-footer-links-list">
+            <li><a href="contact.html">Track Order &amp; Support</a></li>
+            <li><a href="faq.html#shipping">Shipping to Bhutan</a></li>
+            <li><a href="faq.html#returns">Return &amp; Refund</a></li>
+            <li><a href="contact.html">Contact Office</a></li>
+            <li><a href="faq.html">Wholesale Terms</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="mart-footer-title">Contact Us</h4>
+          <ul class="mart-footer-links-list">
+            <li>📞 +975 17 123456 / 17654321</li>
+            <li>✉️ info@bhutanglobalmart.bt</li>
+            <li>📍 Thimphu, Bhutan</li>
+          </ul>
+          <div style="margin-top:12px;">
+            <span style="font-size:0.7rem; color:#94a3b8; display:block; margin-bottom:4px;">We Accept:</span>
+            <div style="display:flex; gap:6px; font-size:0.7rem; font-weight:800; color:#0f172a;">
+              <span style="background:#fff; padding:2px 6px; border-radius:2px;">VISA</span>
+              <span style="background:#fff; padding:2px 6px; border-radius:2px;">MasterCard</span>
+              <span style="background:#fff; padding:2px 6px; border-radius:2px;">PayPal</span>
+              <span style="background:#fff; padding:2px 6px; border-radius:2px;">Stripe</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mart-footer-bottom-line">
+        <div>&copy; 2026 Bhutan Global Mart. All rights reserved. | A Bhutanese Company Connecting You to the World.</div>
+        <div class="dzongkha-footer-script">གཉུག་མའི་ མཛངས་ཤེས་དྲེ་ལས་བྱུང་།</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function checkTracking() {
+      const code = document.getElementById('trackingCodeInput').value.trim();
+      const res = document.getElementById('trackingResult');
+      if (code) {
+        res.style.display = 'block';
+      } else {
+        alert('Please enter your BGM Tracking code');
+      }
+    }
+
+    const form = document.getElementById('globalContactForm');
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Inquiry sent! A quotation with landed Bhutan costs will be delivered to your email/phone.');
+        form.reset();
+      });
+    }
+  </script>
+</body>
+</html>

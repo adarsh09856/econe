@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wholesale Catalog | Bhutan Global Mart - Direct from Alibaba, AliExpress &amp; Amazon</title>
-  <meta name="description" content="Browse international wholesale catalog direct to Bhutan. Filter by platform, calculate bulk MOQ pricing in USD or Ngultrum.">
+  <title>Wholesale Shop Catalog | Bhutan Global Mart</title>
+  <meta name="description" content="Browse international products direct from Alibaba, AliExpress & Amazon. Wholesale MOQ pricing, doorstep shipping to Bhutan.">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +12,7 @@
 </head>
 <body>
 
-  <!-- TOP BAR -->
+  <!-- TOP BAR (EXACT AS HOMEPAGE) -->
   <header class="mart-top-bar">
     <div class="container">
       <div class="sourcing-partners-text">
@@ -39,7 +39,7 @@
         </select>
 
         <div class="user-nav-links">
-          <button type="button" class="user-nav-item" onclick="alert('Devotee / Merchant Account Portal')">
+          <button type="button" class="user-nav-item" onclick="alert('Account login portal')">
             <span>👤 My Account</span>
           </button>
           <button type="button" class="user-nav-item" id="wishlistTrigger">
@@ -55,7 +55,7 @@
     </div>
   </header>
 
-  <!-- MAIN NAVIGATION & SEARCH -->
+  <!-- MAIN NAVIGATION & SEARCH (EXACT AS HOMEPAGE) -->
   <nav class="mart-main-header">
     <div class="container mart-header-row">
       <a href="index.html" class="mart-site-logo">
@@ -64,11 +64,11 @@
 
       <!-- Search Combo Bar -->
       <div class="search-category-combo">
-        <button type="button" class="btn-all-categories-head">
-          <span>☰ All Sourcing Hubs</span>
+        <button type="button" class="btn-all-categories-head" onclick="document.getElementById('shopCatalogArea').scrollIntoView({behavior:'smooth'})">
+          <span>☰ All Categories</span>
         </button>
-        <input type="search" id="catalogSearchInput" class="search-field-input" placeholder="Search wholesale products, electronics, jackets, MOQ...">
-        <button type="button" class="btn-search-icon-submit" aria-label="Search Catalog">
+        <input type="search" id="storeSearchInput" class="search-field-input" placeholder="Search for products, brands, categories...">
+        <button type="button" class="btn-search-icon-submit" onclick="performStoreSearch()" aria-label="Search Catalog">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
         </button>
       </div>
@@ -86,202 +86,301 @@
     </div>
   </nav>
 
-  <!-- BANNER -->
-  <section style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); color: #fff; padding: 36px 0; border-bottom: 3px solid #f59e0b;">
-    <div class="container" style="text-align: center;">
-      <span style="font-size:0.8rem; font-weight:800; color:#fef08a; text-transform:uppercase; letter-spacing:1px;">Factory Wholesale Direct</span>
-      <h1 style="font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 900; margin: 4px 0 8px;">Global Sourcing Catalog for Bhutan</h1>
-      <p style="color: #e0f2fe; max-width: 650px; margin: 0 auto; font-size: 0.92rem;">
-        Consolidated customs clearance, insured freight forwarding to Thimphu and Phuentsholing, and local Bhutanese payment options.
+  <!-- SUBPAGE HERO BANNER -->
+  <section class="subpage-mart-hero">
+    <div class="container">
+      <span class="subpage-mart-tagline">Factory Direct Global Sourcing</span>
+      <h1 class="subpage-mart-title">International Wholesale Catalog</h1>
+      <p class="subpage-mart-desc">
+        Import premium electronics, winter apparel, smart home gadgets and kitchen essentials at bulk rates with guaranteed customs clearance to Thimphu and Phuentsholing.
       </p>
+      <div class="subpage-mart-breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>Shop Catalog</span>
+      </div>
     </div>
   </section>
 
-  <!-- SHOP MAIN CONTAINER -->
-  <section style="background: #f8fafc; padding: 40px 0 60px;">
+  <!-- 8 CATEGORIES QUICK STRIP -->
+  <section class="categories-bar-section" style="padding: 20px 0; background: #fff; border-bottom: 1px solid #e2e8f0;">
     <div class="container">
-      <div style="display: grid; grid-template-columns: 260px 1fr; gap: 30px; align-items: start;">
+      <div class="category-strip-grid">
+        <div class="category-pill-item" onclick="filterByCategory('Electronics')">
+          <div class="cat-icon-circle">💻</div>
+          <span class="cat-pill-label">Electronics &amp; Gadgets</span>
+        </div>
+        <div class="category-pill-item" onclick="filterByCategory('Fashion')">
+          <div class="cat-icon-circle">👕</div>
+          <span class="cat-pill-label">Fashion &amp; Apparel</span>
+        </div>
+        <div class="category-pill-item" onclick="filterByCategory('Home')">
+          <div class="cat-icon-circle">🛋️</div>
+          <span class="cat-pill-label">Home &amp; Living</span>
+        </div>
+        <div class="category-pill-item" onclick="filterByCategory('Beauty')">
+          <div class="cat-icon-circle">💄</div>
+          <span class="cat-pill-label">Beauty &amp; Health</span>
+        </div>
+        <div class="category-pill-item" onclick="filterByCategory('Sports')">
+          <div class="cat-icon-circle">⚽</div>
+          <span class="cat-pill-label">Sports &amp; Outdoor</span>
+        </div>
+        <div class="category-pill-item" onclick="filterByCategory('Toys')">
+          <div class="cat-icon-circle">🧸</div>
+          <span class="cat-pill-label">Toys &amp; Baby</span>
+        </div>
+        <div class="category-pill-item" onclick="filterByCategory('Automotive')">
+          <div class="cat-icon-circle">🚗</div>
+          <span class="cat-pill-label">Automotive</span>
+        </div>
+        <div class="category-pill-item" onclick="filterByCategory('All')">
+          <div class="cat-icon-circle">🔲</div>
+          <span class="cat-pill-label">All Categories</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- FILTER SIDEBAR -->
-        <aside style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 22px; box-shadow: 0 4px 15px rgba(0,0,0,0.04);">
-          <h3 style="font-size: 0.95rem; font-weight: 800; color: #0f172a; margin-bottom: 14px; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px;">Filter by Sourcing Platform</h3>
-          <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; font-size: 0.85rem; color: #475569;">
-            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
-              <input type="radio" name="platformFilter" value="all" checked onchange="filterCatalogPlatform('all')">
-              <span>All Global Hubs</span>
+  <!-- MAIN CATALOG SPLIT: SIDEBAR FILTERS + PRODUCTS GRID -->
+  <section style="background: #f8fafc; padding: 30px 0 60px;" id="shopCatalogArea">
+    <div class="container">
+      <div class="shop-catalog-layout">
+        <!-- Sidebar Filters -->
+        <aside class="shop-sidebar-filter">
+          <div class="filter-heading">
+            <span>Filter Catalog</span>
+            <button type="button" onclick="resetFilters()" style="background:none; border:none; color:#0284c7; font-size:0.75rem; font-weight:700; cursor:pointer;">Reset</button>
+          </div>
+
+          <!-- Sourcing Platform Filter -->
+          <div class="filter-group-block">
+            <h4 class="filter-group-title">Sourcing Platform</h4>
+            <label class="filter-option-row">
+              <span><input type="checkbox" checked onchange="filterPlatform('Alibaba')"> Alibaba.com</span>
+              <span class="filter-count-badge">2</span>
             </label>
-            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
-              <input type="radio" name="platformFilter" value="Alibaba" onchange="filterCatalogPlatform('Alibaba')">
-              <span>Alibaba Factory Direct</span>
+            <label class="filter-option-row">
+              <span><input type="checkbox" checked onchange="filterPlatform('AliExpress')"> AliExpress</span>
+              <span class="filter-count-badge">2</span>
             </label>
-            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
-              <input type="radio" name="platformFilter" value="AliExpress" onchange="filterCatalogPlatform('AliExpress')">
-              <span>AliExpress Small Bulk</span>
-            </label>
-            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
-              <input type="radio" name="platformFilter" value="Amazon" onchange="filterCatalogPlatform('Amazon')">
-              <span>Amazon Prime Global</span>
+            <label class="filter-option-row">
+              <span><input type="checkbox" checked onchange="filterPlatform('Amazon')"> Amazon Global</span>
+              <span class="filter-count-badge">2</span>
             </label>
           </div>
 
-          <h3 style="font-size: 0.95rem; font-weight: 800; color: #0f172a; margin-bottom: 14px; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px;">Categories</h3>
-          <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: #475569;">
-            <button type="button" class="cat-filter-link active" onclick="filterCatalogCategory('all')">All Categories</button>
-            <button type="button" class="cat-filter-link" onclick="filterCatalogCategory('Electronics')">Electronics &amp; Gadgets</button>
-            <button type="button" class="cat-filter-link" onclick="filterCatalogCategory('Fashion')">Fashion &amp; Apparel</button>
-            <button type="button" class="cat-filter-link" onclick="filterCatalogCategory('Home')">Home &amp; Kitchen</button>
-            <button type="button" class="cat-filter-link" onclick="filterCatalogCategory('Bags')">Luggage &amp; Travel</button>
+          <!-- Minimum Order Quantity Filter -->
+          <div class="filter-group-block">
+            <h4 class="filter-group-title">Minimum Order (MOQ)</h4>
+            <label class="filter-option-row">
+              <span><input type="checkbox" checked> Under 20 pcs</span>
+              <span class="filter-count-badge">2</span>
+            </label>
+            <label class="filter-option-row">
+              <span><input type="checkbox" checked> 20 &ndash; 50 pcs</span>
+              <span class="filter-count-badge">3</span>
+            </label>
+            <label class="filter-option-row">
+              <span><input type="checkbox" checked> 100+ pcs</span>
+              <span class="filter-count-badge">1</span>
+            </label>
+          </div>
+
+          <!-- Price Range Filter -->
+          <div class="filter-group-block">
+            <h4 class="filter-group-title">Price Range (USD)</h4>
+            <label class="filter-option-row">
+              <span><input type="checkbox" checked> Under $10</span>
+              <span class="filter-count-badge">2</span>
+            </label>
+            <label class="filter-option-row">
+              <span><input type="checkbox" checked> $10 &ndash; $25</span>
+              <span class="filter-count-badge">3</span>
+            </label>
+            <label class="filter-option-row">
+              <span><input type="checkbox" checked> Over $25</span>
+              <span class="filter-count-badge">1</span>
+            </label>
+          </div>
+
+          <!-- Trust Badges in Sidebar -->
+          <div style="background:#f1f5f9; padding:14px; border-radius:4px; font-size:0.75rem; color:#475569; line-height:1.4;">
+            <strong style="color:#0f172a; display:block; margin-bottom:4px;">🛡️ Bhutan Buyer Protection</strong>
+            Inspection before dispatch. Full escrow payment security via local bank transfer.
           </div>
         </aside>
 
-        <!-- PRODUCT CATALOG GRID -->
+        <!-- Right Products Section -->
         <div>
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px;">
-            <span style="font-size: 0.9rem; color: #64748b; font-weight: 600;" id="catalogResultsCount">Showing 6 verified wholesale products</span>
-            <div style="display: flex; gap: 8px;">
-              <a href="farm-brokerage.html" style="font-size: 0.85rem; font-weight: 700; color: #16a34a; background: #f0fdf4; border: 1px solid #bbf7d0; padding: 6px 14px; border-radius: 9999px;">🌿 Explore Bhutan Farmland &rarr;</a>
+          <!-- Toolbar -->
+          <div class="shop-toolbar">
+            <div style="font-size: 0.85rem; font-weight: 700; color: #475569;">
+              Showing <span style="color:#0284c7; font-weight:900;">6</span> Wholesale Products
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="font-size: 0.8rem; color: #64748b;">Sort By:</span>
+              <select class="shop-sort-select" id="sortSelect">
+                <option value="featured">Featured &amp; Trending</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="moq-asc">MOQ: Smallest First</option>
+              </select>
             </div>
           </div>
 
-          <div class="products-cards-row" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 18px;" id="shopCatalogContainer">
+          <!-- 6 PRODUCTS CARDS (EXACT FROM DESIGN COMP) -->
+          <div class="products-cards-row" id="featuredGrid">
             <!-- 1. Wireless Earbuds -->
-            <article class="product-item-card catalog-card" data-category="Electronics" data-platform="Amazon" data-title="Wireless Earbuds ANC Bluetooth 5.3">
-              <div class="product-img-box">
-                <img src="assets/prod-earbuds.jpg" alt="Wireless Earbuds">
-                <span class="product-ribbon-tag new">New</span>
-                <button type="button" class="btn-item-wishlist" aria-label="Add to Wishlist">🤍</button>
+            <article class="product-item-card" data-category="Electronics" data-platform="Amazon" data-price="8.50" data-moq="50">
+              <span class="badge-corner-new">New</span>
+              <button type="button" class="wishlist-btn-heart" onclick="toggleWishlist(this, 'Wireless Earbuds')" title="Add to Wishlist">🤍</button>
+              <div class="prod-thumbnail-box">
+                <img src="assets/prod-1.jpg" alt="Wireless Earbuds">
               </div>
-              <div class="product-details-box">
-                <h3 class="prod-item-name">Wireless Earbuds</h3>
-                <div class="prod-rating-line">
-                  <span class="rating-star-yellow">★ 4.8</span>
-                  <span>(2.3k)</span>
+              <div class="prod-details-body">
+                <h3 class="prod-name-title">Wireless Earbuds</h3>
+                <div class="prod-rating-row">
+                  <span class="rating-stars">★ 4.8</span>
+                  <span class="rating-count">(2.3k)</span>
                 </div>
                 <div class="prod-moq-spec">MOQ: 50 pcs</div>
-                <div class="prod-price-range">
-                  <span data-base-price="8.50">$8.50</span> &ndash; <span data-base-price="11.20">$11.20</span> <span style="font-size:0.7rem; color:#64748b; font-weight:normal;">/pc</span>
+                <div class="prod-price-tier" data-usd-min="8.50" data-usd-max="11.20">$8.50 &ndash; $11.20 <span class="per-unit-text">/pc</span></div>
+                <div class="prod-tags-row">
+                  <span class="tag-platform-pill amazon">Amazon</span>
+                  <span class="tag-category-pill">Electronics</span>
                 </div>
-                <div class="prod-source-actions-row">
-                  <span class="source-pill-label amazon">Amazon</span>
-                  <button type="button" class="btn-add-cart-mini" onclick="addToCartDirect('Wireless Earbuds', 8.50, 'assets/prod-earbuds.jpg')">+ Cart</button>
-                </div>
+                <button type="button" class="btn-add-to-cart-action" onclick="addToCart('Wireless Earbuds', 8.50, 'assets/prod-1.jpg', 50)">
+                  <span>Add to Wholesale Cart</span>
+                  <span>+</span>
+                </button>
               </div>
             </article>
 
             <!-- 2. Smart Watch -->
-            <article class="product-item-card catalog-card" data-category="Electronics" data-platform="Alibaba" data-title="Smart Watch Waterproof Fitness Heart Rate">
-              <div class="product-img-box">
-                <img src="assets/prod-watch.jpg" alt="Smart Watch">
-                <span class="product-ribbon-tag bestseller">Best Seller</span>
-                <button type="button" class="btn-item-wishlist" aria-label="Add to Wishlist">🤍</button>
+            <article class="product-item-card" data-category="Electronics" data-platform="Alibaba" data-price="15.00" data-moq="20">
+              <span class="badge-corner-best">Best Seller</span>
+              <button type="button" class="wishlist-btn-heart" onclick="toggleWishlist(this, 'Smart Watch')" title="Add to Wishlist">🤍</button>
+              <div class="prod-thumbnail-box">
+                <img src="assets/prod-2.jpg" alt="Smart Watch">
               </div>
-              <div class="product-details-box">
-                <h3 class="prod-item-name">Smart Watch</h3>
-                <div class="prod-rating-line">
-                  <span class="rating-star-yellow">★ 4.7</span>
-                  <span>(1.8k)</span>
+              <div class="prod-details-body">
+                <h3 class="prod-name-title">Smart Watch</h3>
+                <div class="prod-rating-row">
+                  <span class="rating-stars">★ 4.7</span>
+                  <span class="rating-count">(1.8k)</span>
                 </div>
                 <div class="prod-moq-spec">MOQ: 20 pcs</div>
-                <div class="prod-price-range">
-                  <span data-base-price="15.00">$15.00</span> &ndash; <span data-base-price="22.00">$22.00</span> <span style="font-size:0.7rem; color:#64748b; font-weight:normal;">/pc</span>
+                <div class="prod-price-tier" data-usd-min="15.00" data-usd-max="22.00">$15.00 &ndash; $22.00 <span class="per-unit-text">/pc</span></div>
+                <div class="prod-tags-row">
+                  <span class="tag-platform-pill alibaba">Alibaba</span>
+                  <span class="tag-category-pill">Electronics</span>
                 </div>
-                <div class="prod-source-actions-row">
-                  <span class="source-pill-label alibaba">Alibaba</span>
-                  <button type="button" class="btn-add-cart-mini" onclick="addToCartDirect('Smart Watch', 15.00, 'assets/prod-watch.jpg')">+ Cart</button>
-                </div>
+                <button type="button" class="btn-add-to-cart-action" onclick="addToCart('Smart Watch', 15.00, 'assets/prod-2.jpg', 20)">
+                  <span>Add to Wholesale Cart</span>
+                  <span>+</span>
+                </button>
               </div>
             </article>
 
             <!-- 3. Winter Jacket -->
-            <article class="product-item-card catalog-card" data-category="Fashion" data-platform="AliExpress" data-title="Winter Jacket Thermal Windproof Himalayan Cold">
-              <div class="product-img-box">
-                <img src="assets/prod-jacket.jpg" alt="Winter Jacket">
-                <span class="product-ribbon-tag hot">Hot</span>
-                <button type="button" class="btn-item-wishlist" aria-label="Add to Wishlist">🤍</button>
+            <article class="product-item-card" data-category="Fashion" data-platform="AliExpress" data-price="12.00" data-moq="50">
+              <span class="badge-corner-hot">Hot</span>
+              <button type="button" class="wishlist-btn-heart" onclick="toggleWishlist(this, 'Winter Jacket')" title="Add to Wishlist">🤍</button>
+              <div class="prod-thumbnail-box">
+                <img src="assets/prod-3.jpg" alt="Winter Jacket">
               </div>
-              <div class="product-details-box">
-                <h3 class="prod-item-name">Winter Jacket</h3>
-                <div class="prod-rating-line">
-                  <span class="rating-star-yellow">★ 4.6</span>
-                  <span>(1.2k)</span>
+              <div class="prod-details-body">
+                <h3 class="prod-name-title">Winter Jacket</h3>
+                <div class="prod-rating-row">
+                  <span class="rating-stars">★ 4.6</span>
+                  <span class="rating-count">(1.2k)</span>
                 </div>
                 <div class="prod-moq-spec">MOQ: 50 pcs</div>
-                <div class="prod-price-range">
-                  <span data-base-price="12.00">$12.00</span> &ndash; <span data-base-price="18.00">$18.00</span> <span style="font-size:0.7rem; color:#64748b; font-weight:normal;">/pc</span>
+                <div class="prod-price-tier" data-usd-min="12.00" data-usd-max="18.00">$12.00 &ndash; $18.00 <span class="per-unit-text">/pc</span></div>
+                <div class="prod-tags-row">
+                  <span class="tag-platform-pill aliexpress">AliExpress</span>
+                  <span class="tag-category-pill">Fashion</span>
                 </div>
-                <div class="prod-source-actions-row">
-                  <span class="source-pill-label aliexpress">AliExpress</span>
-                  <button type="button" class="btn-add-cart-mini" onclick="addToCartDirect('Winter Jacket', 12.00, 'assets/prod-jacket.jpg')">+ Cart</button>
-                </div>
+                <button type="button" class="btn-add-to-cart-action" onclick="addToCart('Winter Jacket', 12.00, 'assets/prod-3.jpg', 50)">
+                  <span>Add to Wholesale Cart</span>
+                  <span>+</span>
+                </button>
               </div>
             </article>
 
             <!-- 4. Air Fryer -->
-            <article class="product-item-card catalog-card" data-category="Home" data-platform="Amazon" data-title="Air Fryer 5.5L Digital Touch Kitchen Appliance">
-              <div class="product-img-box">
-                <img src="assets/prod-airfryer.jpg" alt="Air Fryer">
-                <button type="button" class="btn-item-wishlist" aria-label="Add to Wishlist">🤍</button>
+            <article class="product-item-card" data-category="Home" data-platform="Amazon" data-price="25.00" data-moq="10">
+              <button type="button" class="wishlist-btn-heart" onclick="toggleWishlist(this, 'Air Fryer')" title="Add to Wishlist">🤍</button>
+              <div class="prod-thumbnail-box">
+                <img src="assets/prod-4.jpg" alt="Air Fryer">
               </div>
-              <div class="product-details-box">
-                <h3 class="prod-item-name">Air Fryer (5.5L)</h3>
-                <div class="prod-rating-line">
-                  <span class="rating-star-yellow">★ 4.9</span>
-                  <span>(980)</span>
+              <div class="prod-details-body">
+                <h3 class="prod-name-title">Air Fryer</h3>
+                <div class="prod-rating-row">
+                  <span class="rating-stars">★ 4.9</span>
+                  <span class="rating-count">(980)</span>
                 </div>
                 <div class="prod-moq-spec">MOQ: 10 pcs</div>
-                <div class="prod-price-range">
-                  <span data-base-price="25.00">$25.00</span> &ndash; <span data-base-price="38.00">$38.00</span> <span style="font-size:0.7rem; color:#64748b; font-weight:normal;">/pc</span>
+                <div class="prod-price-tier" data-usd-min="25.00" data-usd-max="38.00">$25.00 &ndash; $38.00 <span class="per-unit-text">/pc</span></div>
+                <div class="prod-tags-row">
+                  <span class="tag-platform-pill amazon">Amazon</span>
+                  <span class="tag-category-pill">Home &amp; Kitchen</span>
                 </div>
-                <div class="prod-source-actions-row">
-                  <span class="source-pill-label amazon">Amazon</span>
-                  <button type="button" class="btn-add-cart-mini" onclick="addToCartDirect('Air Fryer', 25.00, 'assets/prod-airfryer.jpg')">+ Cart</button>
-                </div>
+                <button type="button" class="btn-add-to-cart-action" onclick="addToCart('Air Fryer', 25.00, 'assets/prod-4.jpg', 10)">
+                  <span>Add to Wholesale Cart</span>
+                  <span>+</span>
+                </button>
               </div>
             </article>
 
             <!-- 5. Travel Backpack -->
-            <article class="product-item-card catalog-card" data-category="Bags" data-platform="Alibaba" data-title="Travel Backpack Waterproof Trekking Luggage">
-              <div class="product-img-box">
-                <img src="assets/prod-backpack.jpg" alt="Travel Backpack">
-                <button type="button" class="btn-item-wishlist" aria-label="Add to Wishlist">🤍</button>
+            <article class="product-item-card" data-category="Fashion" data-platform="Alibaba" data-price="10.00" data-moq="30">
+              <button type="button" class="wishlist-btn-heart" onclick="toggleWishlist(this, 'Travel Backpack')" title="Add to Wishlist">🤍</button>
+              <div class="prod-thumbnail-box">
+                <img src="assets/prod-5.jpg" alt="Travel Backpack">
               </div>
-              <div class="product-details-box">
-                <h3 class="prod-item-name">Travel Backpack (40L)</h3>
-                <div class="prod-rating-line">
-                  <span class="rating-star-yellow">★ 4.7</span>
-                  <span>(1.4k)</span>
+              <div class="prod-details-body">
+                <h3 class="prod-name-title">Travel Backpack</h3>
+                <div class="prod-rating-row">
+                  <span class="rating-stars">★ 4.7</span>
+                  <span class="rating-count">(1.4k)</span>
                 </div>
                 <div class="prod-moq-spec">MOQ: 30 pcs</div>
-                <div class="prod-price-range">
-                  <span data-base-price="10.00">$10.00</span> &ndash; <span data-base-price="16.00">$16.00</span> <span style="font-size:0.7rem; color:#64748b; font-weight:normal;">/pc</span>
+                <div class="prod-price-tier" data-usd-min="10.00" data-usd-max="16.00">$10.00 &ndash; $16.00 <span class="per-unit-text">/pc</span></div>
+                <div class="prod-tags-row">
+                  <span class="tag-platform-pill alibaba">Alibaba</span>
+                  <span class="tag-category-pill">Bags &amp; Luggage</span>
                 </div>
-                <div class="prod-source-actions-row">
-                  <span class="source-pill-label alibaba">Alibaba</span>
-                  <button type="button" class="btn-add-cart-mini" onclick="addToCartDirect('Travel Backpack', 10.00, 'assets/prod-backpack.jpg')">+ Cart</button>
-                </div>
+                <button type="button" class="btn-add-to-cart-action" onclick="addToCart('Travel Backpack', 10.00, 'assets/prod-5.jpg', 30)">
+                  <span>Add to Wholesale Cart</span>
+                  <span>+</span>
+                </button>
               </div>
             </article>
 
-            <!-- 6. LED Bulb Pack -->
-            <article class="product-item-card catalog-card" data-category="Home" data-platform="AliExpress" data-title="LED Bulb 10 pcs Energy Saving Pack 9W E27">
-              <div class="product-img-box">
-                <img src="assets/prod-led.jpg" alt="LED Bulbs">
-                <button type="button" class="btn-item-wishlist" aria-label="Add to Wishlist">🤍</button>
+            <!-- 6. LED Bulb (10 pcs) -->
+            <article class="product-item-card" data-category="Home" data-platform="AliExpress" data-price="5.50" data-moq="100">
+              <button type="button" class="wishlist-btn-heart" onclick="toggleWishlist(this, 'LED Bulb Set')" title="Add to Wishlist">🤍</button>
+              <div class="prod-thumbnail-box">
+                <img src="assets/prod-6.jpg" alt="LED Bulb 10 pcs">
               </div>
-              <div class="product-details-box">
-                <h3 class="prod-item-name">LED Bulb (10 pcs Pack)</h3>
-                <div class="prod-rating-line">
-                  <span class="rating-star-yellow">★ 4.8</span>
-                  <span>(760)</span>
+              <div class="prod-details-body">
+                <h3 class="prod-name-title">LED Bulb (10 pcs)</h3>
+                <div class="prod-rating-row">
+                  <span class="rating-stars">★ 4.8</span>
+                  <span class="rating-count">(760)</span>
                 </div>
                 <div class="prod-moq-spec">MOQ: 100 pcs</div>
-                <div class="prod-price-range">
-                  <span data-base-price="5.50">$5.50</span> &ndash; <span data-base-price="8.00">$8.00</span> <span style="font-size:0.7rem; color:#64748b; font-weight:normal;">/pc</span>
+                <div class="prod-price-tier" data-usd-min="5.50" data-usd-max="8.00">$5.50 &ndash; $8.00 <span class="per-unit-text">/pc</span></div>
+                <div class="prod-tags-row">
+                  <span class="tag-platform-pill aliexpress">AliExpress</span>
+                  <span class="tag-category-pill">Home &amp; Living</span>
                 </div>
-                <div class="prod-source-actions-row">
-                  <span class="source-pill-label aliexpress">AliExpress</span>
-                  <button type="button" class="btn-add-cart-mini" onclick="addToCartDirect('LED Bulb 10 pcs', 5.50, 'assets/prod-led.jpg')">+ Cart</button>
-                </div>
+                <button type="button" class="btn-add-to-cart-action" onclick="addToCart('LED Bulb (10 pcs)', 5.50, 'assets/prod-6.jpg', 100)">
+                  <span>Add to Wholesale Cart</span>
+                  <span>+</span>
+                </button>
               </div>
             </article>
           </div>
@@ -290,216 +389,148 @@
     </div>
   </section>
 
-  <!-- B2B GUARANTEE BAR -->
-  <section class="guarantee-ribbon-section">
+  <!-- 4-ITEM TRUST & GUARANTEE STRIP (EXACT AS HOMEPAGE) -->
+  <section class="guarantee-section">
     <div class="container">
-      <div class="guarantee-four-grid">
-        <div class="guarantee-box-item">
-          <div class="guarantee-icon-round">🏢</div>
+      <div class="guarantee-strip-box">
+        <div class="guarantee-col-item">
+          <div class="guarantee-icon-wrapper">📦</div>
           <div>
-            <div class="guarantee-item-title">Bulk Orders &amp; Business Pricing</div>
-            <p class="guarantee-item-desc">Get special wholesale rates for bulk purchases. Contact us for custom offers &amp; MOQ details.</p>
-            <button type="button" class="btn-guarantee-contact" onclick="alert('B2B Wholesale Trade Desk: +975 17 123456')">Contact Us</button>
+            <h4 class="guarantee-title-bold">Bulk Orders &amp; Business Pricing</h4>
+            <p class="guarantee-sub-text">Special wholesale rates for bulk purchases. Contact us for custom offers and MOQ details.</p>
+            <button type="button" class="btn-guarantee-action" onclick="alert('Business Pricing Desk: info@bhutanglobalmart.bt')">Contact Us</button>
           </div>
         </div>
 
-        <div class="guarantee-box-item">
-          <div class="guarantee-icon-round">🌐</div>
+        <div class="guarantee-col-item">
+          <div class="guarantee-icon-wrapper">🌐</div>
           <div>
-            <div class="guarantee-item-title">Global Sourcing</div>
-            <p class="guarantee-item-desc">Direct from Alibaba, AliExpress &amp; Amazon with verified authenticity and inspection.</p>
+            <h4 class="guarantee-title-bold">Global Sourcing</h4>
+            <p class="guarantee-sub-text">Direct from Alibaba, AliExpress &amp; Amazon with verified supply chain credentials.</p>
           </div>
         </div>
 
-        <div class="guarantee-box-item">
-          <div class="guarantee-icon-round">🛡️</div>
+        <div class="guarantee-col-item">
+          <div class="guarantee-icon-wrapper">🛡️</div>
           <div>
-            <div class="guarantee-item-title">Secure &amp; Trusted</div>
-            <p class="guarantee-item-desc">100% Authentic Products &amp; Safe Payments via local banking &amp; international cards.</p>
+            <h4 class="guarantee-title-bold">Secure &amp; Trusted</h4>
+            <p class="guarantee-sub-text">100% Authentic Products &amp; Safe Payments via verified Bhutan banking gateways.</p>
           </div>
         </div>
 
-        <div class="guarantee-box-item">
-          <div class="guarantee-icon-round">🚚</div>
+        <div class="guarantee-col-item">
+          <div class="guarantee-icon-wrapper">🚚</div>
           <div>
-            <div class="guarantee-item-title">Worldwide Shipping</div>
-            <p class="guarantee-item-desc">Fast &amp; Reliable Delivery Support direct to Thimphu, Phuentsholing, and Paro.</p>
+            <h4 class="guarantee-title-bold">Worldwide Shipping</h4>
+            <p class="guarantee-sub-text">Fast &amp; Reliable Delivery Support direct to your Dzongkhag doorstep.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- MAIN FOOTER -->
-  <footer class="mart-main-footer">
+  <!-- CART SLIDEOUT DRAWER -->
+  <aside class="cart-drawer" id="cartDrawer" style="position:fixed; top:0; right:-420px; width:100%; max-width:400px; height:100vh; background:#fff; box-shadow:-5px 0 25px rgba(0,0,0,0.25); z-index:1000; transition:right 0.3s cubic-bezier(0.16,1,0.3,1); display:flex; flex-direction:column;">
+    <div style="padding:16px 20px; background:#07192d; color:#fff; display:flex; justify-content:space-between; align-items:center;">
+      <h3 style="font-size:1.05rem; font-weight:800;">🛒 Wholesale Cart</h3>
+      <button type="button" id="closeCartBtn" style="background:none; border:none; color:#fff; font-size:1.3rem; cursor:pointer;">✕</button>
+    </div>
+    <div id="cartItemsList" style="flex-grow:1; padding:20px; overflow-y:auto; display:flex; flex-direction:column; gap:12px;"></div>
+    <div style="padding:20px; background:#f8fafc; border-top:1px solid #e2e8f0; display:flex; flex-direction:column; gap:10px;">
+      <div style="display:flex; justify-content:space-between; font-weight:800; font-size:1rem;">
+        <span>Subtotal:</span>
+        <span id="cartSubtotalAmount">$8.50</span>
+      </div>
+      <button type="button" onclick="alert('Proceeding to Bhutan Wholesale Checkout via M-BoB / B-Mobile.')" style="background:#0284c7; color:#fff; border:none; padding:12px; border-radius:4px; font-weight:800; cursor:pointer;">
+        Proceed to Checkout
+      </button>
+    </div>
+  </aside>
+
+  <!-- FOOTER (EXACT AS HOMEPAGE) -->
+  <footer class="mart-footer-section">
     <div class="container">
-      <div class="mart-footer-top-grid">
-        <div class="footer-col-brand">
-          <img src="assets/logo.jpg" alt="Bhutan Global Mart Logo" class="footer-brand-logo">
-          <div class="footer-brand-slogan">Global Products &bull; Local Support</div>
+      <div class="mart-footer-columns">
+        <div>
+          <img src="assets/footer-logo.jpg" alt="Bhutan Global Mart Footer Logo" style="height:36px; margin-bottom:10px;">
+          <p style="font-size:0.78rem; color:#94a3b8; line-height:1.5;">
+            Global Products &bull; Local Support. Connecting Bhutan directly with factories and distribution centers worldwide.
+          </p>
         </div>
 
-        <div class="footer-col-links">
-          <h4 class="footer-col-heading">Quick Links</h4>
-          <ul class="footer-links-list">
+        <div>
+          <h4 class="mart-footer-title">Quick Links</h4>
+          <ul class="mart-footer-links-list">
             <li><a href="index.html">Home</a></li>
-            <li><a href="shop.html">Shop</a></li>
+            <li><a href="shop.html">Shop Catalog</a></li>
+            <li><a href="about.html">About Us</a></li>
             <li><a href="farm-brokerage.html">Farm Brokerage</a></li>
-            <li><a href="index.html#featuredProducts">Featured Products</a></li>
-            <li><a href="index.html#videos">Product Videos</a></li>
+            <li><a href="faq.html">FAQ &amp; Help</a></li>
           </ul>
         </div>
 
-        <div class="footer-col-links">
-          <h4 class="footer-col-heading">Customer Service</h4>
-          <ul class="footer-links-list">
-            <li><a href="#">Track Order</a></li>
-            <li><a href="#">Shipping Policy</a></li>
-            <li><a href="#">Return &amp; Refund</a></li>
-            <li><a href="#">Terms &amp; Conditions</a></li>
-            <li><a href="#">Privacy Policy</a></li>
+        <div>
+          <h4 class="mart-footer-title">Customer Service</h4>
+          <ul class="mart-footer-links-list">
+            <li><a href="contact.html">Track Order &amp; Support</a></li>
+            <li><a href="faq.html#shipping">Shipping to Bhutan</a></li>
+            <li><a href="faq.html#returns">Return &amp; Refund</a></li>
+            <li><a href="contact.html">Contact Office</a></li>
+            <li><a href="faq.html">Wholesale Terms</a></li>
           </ul>
         </div>
 
-        <div class="footer-col-contact">
-          <h4 class="footer-col-heading">Contact Us</h4>
-          <div class="footer-contact-row">
-            <span>📞</span>
-            <span>+975 17 123456 / 17654321</span>
-          </div>
-          <div class="footer-contact-row">
-            <span>✉️</span>
-            <span>info@bhutanglobalmart.bt</span>
-          </div>
-          <div class="footer-contact-row">
-            <span>📍</span>
-            <span>Thimphu, Bhutan</span>
-          </div>
-
-          <div style="margin-top:14px;">
-            <div style="font-size:0.78rem; font-weight:700; color:#fff; margin-bottom:6px;">Follow Us</div>
-            <div class="social-pills-row">
-              <a href="#" class="social-pill-icon tiktok"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .58.04.85.12V9.4a6.33 6.33 0 0 0-.85-.06A6.34 6.34 0 0 0 3 15.68a6.34 6.34 0 0 0 10.82 4.48 6.3 6.3 0 0 0 1.87-4.49V8.65a8.28 8.28 0 0 0 4.9 1.58V6.78a4.83 4.83 0 0 1-1-.09z"/></svg></a>
-              <a href="#" class="social-pill-icon fb"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-              <a href="#" class="social-pill-icon ig"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path></svg></a>
-              <a href="#" class="social-pill-icon yt"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33zM9.75 15.02V8.48l5.75 3.27-5.75 3.27z"/></svg></a>
+        <div>
+          <h4 class="mart-footer-title">Contact Us</h4>
+          <ul class="mart-footer-links-list">
+            <li>📞 +975 17 123456 / 17654321</li>
+            <li>✉️ info@bhutanglobalmart.bt</li>
+            <li>📍 Thimphu, Bhutan</li>
+          </ul>
+          <div style="margin-top:12px;">
+            <span style="font-size:0.7rem; color:#94a3b8; display:block; margin-bottom:4px;">We Accept:</span>
+            <div style="display:flex; gap:6px; font-size:0.7rem; font-weight:800; color:#0f172a;">
+              <span style="background:#fff; padding:2px 6px; border-radius:2px;">VISA</span>
+              <span style="background:#fff; padding:2px 6px; border-radius:2px;">MasterCard</span>
+              <span style="background:#fff; padding:2px 6px; border-radius:2px;">PayPal</span>
+              <span style="background:#fff; padding:2px 6px; border-radius:2px;">Stripe</span>
             </div>
           </div>
         </div>
-
-        <div class="footer-col-payment">
-          <h4 class="footer-col-heading">We Accept</h4>
-          <div class="payment-logos-badge-row">
-            <span class="pay-tag visa">VISA</span>
-            <span class="pay-tag mc">MasterCard</span>
-            <span class="pay-tag paypal">PayPal</span>
-            <span class="pay-tag stripe">stripe</span>
-          </div>
-          <div class="support-local-motto">
-            <span style="font-size:1.1rem; color:#f59e0b;">🏔️</span>
-            <span>Support Local &bull; Grow Global</span>
-          </div>
-        </div>
       </div>
 
-      <div class="mart-footer-bottom-strip">
-        <p>&copy; 2026 Bhutan Global Mart. All rights reserved. | A Bhutanese Company Connecting You to the World.</p>
-        <p class="dzongkha-text">འབྲུག་གི་ མདུན་ལམ་ནང་འདྲེན་ཡོངས་འབྲེལ།</p>
+      <div class="mart-footer-bottom-line">
+        <div>&copy; 2026 Bhutan Global Mart. All rights reserved. | A Bhutanese Company Connecting You to the World.</div>
+        <div class="dzongkha-footer-script">གཉུག་མའི་ མཛངས་ཤེས་དྲེ་ལས་བྱུང་།</div>
       </div>
     </div>
   </footer>
 
-  <!-- NATIVE MODAL: SLIDE-OUT CART DRAWER -->
-  <dialog id="cartDrawerModal" aria-labelledby="cartDrawerModalTitle">
-    <div class="cart-drawer-head">
-      <span id="cartDrawerModalTitle">Wholesale Shopping Cart</span>
-      <button type="button" data-close-modal="cartDrawerModal" class="btn-close-cart" aria-label="Close Cart">✕</button>
-    </div>
-    <div class="cart-drawer-body">
-      <div id="cartItemsContainer"></div>
-    </div>
-    <div class="cart-drawer-foot">
-      <div class="cart-subtotal-display">
-        <span>Subtotal:</span>
-        <span id="cartSubtotalValue" class="cart-subtotal-sum">$8.50</span>
-      </div>
-      <button type="button" class="btn-checkout-action" onclick="alert('Order inquiry sent! A Bhutan Global Mart agent will confirm MOQ and customs invoice.')">
-        Proceed to Wholesale Checkout
-      </button>
-    </div>
-  </dialog>
-
-  <style>
-    .cat-filter-link {
-      background: none;
-      border: none;
-      text-align: left;
-      font-size: 0.85rem;
-      color: #475569;
-      cursor: pointer;
-      padding: 4px 0;
-      transition: color 0.2s ease;
-    }
-    .cat-filter-link:hover, .cat-filter-link.active {
-      color: #0284c7;
-      font-weight: 700;
-    }
-  </style>
-
   <script src="js/main.js"></script>
   <script>
-    function filterCatalogPlatform(platform) {
-      const cards = document.querySelectorAll('.catalog-card');
-      let visible = 0;
-      cards.forEach(card => {
-        if (platform === 'all' || card.getAttribute('data-platform') === platform) {
-          card.style.display = 'flex';
-          visible++;
+    function filterByCategory(cat) {
+      const items = document.querySelectorAll('#featuredGrid .product-item-card');
+      items.forEach(item => {
+        if (cat === 'All' || item.getAttribute('data-category') === cat) {
+          item.style.display = 'flex';
         } else {
-          card.style.display = 'none';
+          item.style.display = 'none';
         }
       });
-      document.getElementById('catalogResultsCount').innerText = `Showing ${visible} verified wholesale products`;
     }
 
-    function filterCatalogCategory(cat) {
-      document.querySelectorAll('.cat-filter-link').forEach(btn => {
-        if ((cat === 'all' && btn.innerText.includes('All Categories')) || btn.innerText.includes(cat)) {
-          btn.classList.add('active');
-        } else {
-          btn.classList.remove('active');
+    function filterPlatform(plat) {
+      const items = document.querySelectorAll('#featuredGrid .product-item-card');
+      items.forEach(item => {
+        if (item.getAttribute('data-platform') === plat) {
+          item.style.display = item.style.display === 'none' ? 'flex' : 'none';
         }
       });
-      const cards = document.querySelectorAll('.catalog-card');
-      let visible = 0;
-      cards.forEach(card => {
-        if (cat === 'all' || card.getAttribute('data-category') === cat) {
-          card.style.display = 'flex';
-          visible++;
-        } else {
-          card.style.display = 'none';
-        }
-      });
-      document.getElementById('catalogResultsCount').innerText = `Showing ${visible} verified wholesale products`;
     }
 
-    const catalogSearch = document.getElementById('catalogSearchInput');
-    if (catalogSearch) {
-      catalogSearch.addEventListener('input', (e) => {
-        const q = e.target.value.toLowerCase();
-        const cards = document.querySelectorAll('.catalog-card');
-        let visible = 0;
-        cards.forEach(card => {
-          const title = (card.getAttribute('data-title') || '').toLowerCase();
-          if (title.includes(q)) {
-            card.style.display = 'flex';
-            visible++;
-          } else {
-            card.style.display = 'none';
-          }
-        });
-        document.getElementById('catalogResultsCount').innerText = `Showing ${visible} verified wholesale products`;
-      });
+    function resetFilters() {
+      document.querySelectorAll('#featuredGrid .product-item-card').forEach(i => i.style.display = 'flex');
+      document.querySelectorAll('.shop-sidebar-filter input[type="checkbox"]').forEach(c => c.checked = true);
     }
   </script>
 </body>

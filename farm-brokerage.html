@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Farm Brokerage | Bhutan Global Mart - Invest in Bhutan's Natural Beauty</title>
-  <meta name="description" content="Buy, sell and lease farms and agricultural land in Bhutan. Organic Apple Farm Paro, Vegetable Farm Thimphu, Dairy Farm Punakha, Mixed Farm Wangdue.">
+  <title>Farm Brokerage | Invest in Bhutan's Natural Beauty | Bhutan Global Mart</title>
+  <meta name="description" content="Verified farmlands, organic orchards, and agri-business properties across Paro, Thimphu, Punakha and Wangdue with video tours and legal brokerage.">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +12,7 @@
 </head>
 <body>
 
-  <!-- TOP BAR -->
+  <!-- TOP BAR (EXACT AS HOMEPAGE) -->
   <header class="mart-top-bar">
     <div class="container">
       <div class="sourcing-partners-text">
@@ -28,8 +28,8 @@
 
       <div class="top-bar-right-controls">
         <select class="currency-select-box" id="currencySelector" aria-label="Currency Selector">
-          <option value="BTN">🇧🇹 BTN (Nu.)</option>
           <option value="USD">🇺🇸 USD ($)</option>
+          <option value="BTN" selected>🇧🇹 BTN (Nu.)</option>
           <option value="INR">🇮🇳 INR (₹)</option>
         </select>
 
@@ -39,7 +39,17 @@
         </select>
 
         <div class="user-nav-links">
-          <a href="index.html" style="color:#cbd5e1; font-size:0.8rem; font-weight:700;">← Back to Global Mart</a>
+          <button type="button" class="user-nav-item" onclick="alert('Account login portal')">
+            <span>👤 My Account</span>
+          </button>
+          <button type="button" class="user-nav-item" id="wishlistTrigger">
+            <span>🤍 Wishlist</span>
+            <span class="counter-badge" id="wishlistCountBadge">0</span>
+          </button>
+          <button type="button" class="user-nav-item" id="cartTrigger">
+            <span>🛒 Cart</span>
+            <span class="counter-badge" id="cartCountBadge">0</span>
+          </button>
         </div>
       </div>
     </div>
@@ -52,259 +62,242 @@
         <img src="assets/logo.jpg" alt="Bhutan Global Mart Logo" class="mart-logo-img">
       </a>
 
-      <div style="display:flex; align-items:center; gap:20px; font-weight:700; font-size:0.95rem;">
-        <a href="index.html" style="color:#0f172a;">Home</a>
-        <a href="shop.html" style="color:#0f172a;">Wholesale Shop</a>
-        <a href="farm-brokerage.html" style="color:#16a34a; border-bottom: 2px solid #16a34a; padding-bottom: 2px;">🌿 Farm Brokerage</a>
-        <a href="index.html#videos" style="color:#0f172a;">Product Videos</a>
+      <!-- Search Combo Bar -->
+      <div class="search-category-combo">
+        <button type="button" class="btn-all-categories-head" onclick="location.href='shop.html'">
+          <span>☰ All Categories</span>
+        </button>
+        <input type="search" id="storeSearchInput" class="search-field-input" placeholder="Search farmland by Dzongkhag, acreage or price...">
+        <button type="button" class="btn-search-icon-submit" aria-label="Search Catalog">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
       </div>
 
-      <button type="button" class="btn-enquire-now" onclick="document.getElementById('enquireFormModal').showModal()">
-        <span>Enquire Land Listing</span>
-        <span>&rarr;</span>
-      </button>
+      <!-- Social Channels -->
+      <div class="header-social-channels">
+        <span class="social-watch-text">Follow us &amp; Watch Land Videos</span>
+        <div class="social-pills-row">
+          <a href="#" class="social-pill-icon tiktok" title="TikTok"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .58.04.85.12V9.4a6.33 6.33 0 0 0-.85-.06A6.34 6.34 0 0 0 3 15.68a6.34 6.34 0 0 0 10.82 4.48 6.3 6.3 0 0 0 1.87-4.49V8.65a8.28 8.28 0 0 0 4.9 1.58V6.78a4.83 4.83 0 0 1-1-.09z"/></svg></a>
+          <a href="#" class="social-pill-icon fb" title="Facebook"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" class="social-pill-icon ig" title="Instagram"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path></svg></a>
+          <a href="#" class="social-pill-icon yt" title="YouTube"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33zM9.75 15.02V8.48l5.75 3.27-5.75 3.27z"/></svg></a>
+        </div>
+      </div>
     </div>
   </nav>
 
-  <!-- BANNER -->
-  <section style="background: linear-gradient(135deg, #14532d 0%, #166534 50%, #15803d 100%); color: #fff; padding: 48px 0; border-bottom: 3px solid #f59e0b;">
-    <div class="container" style="text-align: center;">
-      <span style="font-size:0.85rem; font-weight:800; color:#bbf7d0; text-transform:uppercase; letter-spacing:1.5px;">National Land Commission Verified</span>
-      <h1 style="font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 900; margin: 6px 0 10px;">Bhutan Farm Land &amp; Organic Estate Brokerage</h1>
-      <p style="color: #dcfce7; max-width: 680px; margin: 0 auto; font-size: 0.95rem;">
-        We help you buy, sell and lease fertile agricultural lands across Paro, Thimphu, Punakha and Wangdue. Explore our curated farm listings with 4K drone video tours.
+  <!-- SUBPAGE HERO BANNER (GREEN NATURE THEME) -->
+  <section class="subpage-mart-hero green">
+    <div class="container">
+      <span class="subpage-mart-tagline">🌱 Invest in Bhutan's Natural Bounty</span>
+      <h1 class="subpage-mart-title">Agricultural Land &amp; Farm Brokerage</h1>
+      <p class="subpage-mart-desc">
+        We facilitate transparent buying, selling, and long-term leasing of certified organic orchards, dairy homesteads, and fertile river-valley farmlands across the Kingdom of Bhutan.
       </p>
+      <div class="subpage-mart-breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>Farm Brokerage</span>
+      </div>
     </div>
   </section>
 
-  <!-- FARM BROKERAGE SECTION -->
-  <section class="farm-brokerage-section" style="padding: 45px 0 60px;">
+  <!-- MAIN FARMLAND LISTINGS (EXACT CARDS FROM HOMEPAGE) -->
+  <section class="farm-brokerage-section" style="padding: 50px 0 65px;">
     <div class="container">
-      <div class="farm-section-header">
-        <div class="farm-title-cluster">
-          <span class="farm-sprout-icon">🌱</span>
-          <h2 class="farm-main-heading">Farm Brokerage &ndash; Invest in Bhutan's Natural Beauty</h2>
+      <div class="section-title-line" style="margin-bottom: 24px;">
+        <div class="section-badge-title">
+          <span class="title-glyph green">🌱</span>
+          <div>
+            <h2 class="title-main-text">Curated Farm Listings with Video Tours</h2>
+            <div class="title-sub-text">All properties carry authentic land deeds (Thram) verified with the National Land Commission</div>
+          </div>
         </div>
-        <p class="farm-sub-heading">
-          Official Lagthram title verification, clean irrigation water rights, and fertile organic Himalayan soil.
-        </p>
       </div>
 
-      <!-- 4 Farm Cards Grid -->
-      <div class="farm-cards-grid-row">
+      <!-- 4 Farm Cards + Highlight Box in Flex/Grid -->
+      <div class="farm-listings-grid">
         <!-- Farm 1: Organic Apple Farm Paro -->
         <article class="farm-listing-card">
-          <div class="farm-image-cover">
-            <img src="assets/farm-1.jpg" alt="Organic Apple Farm - Paro">
-            <button type="button" class="farm-play-circle" onclick="openFarmTour('Organic Apple Farm', 'Paro Valley', '15 Acres', 'Nu. 8M – 12M')">▶</button>
+          <div class="farm-media-frame">
+            <img src="assets/farm-1.jpg" alt="Organic Apple Farm Paro">
+            <div class="farm-play-center" onclick="openFarmTour('Organic Apple Farm', 'Paro Valley', '15 Acres (Mature Orchard)', 'Nu. 8M – 12M')">▶</div>
           </div>
-          <div class="farm-card-content">
-            <h3 class="farm-listing-title">Organic Apple Farm &ndash; Paro</h3>
-            <div class="farm-acreage-price">15 Acres | Price: Nu. 8M &ndash; 12M</div>
-            <button type="button" class="btn-watch-farm-video" onclick="openFarmTour('Organic Apple Farm', 'Paro Valley', '15 Acres', 'Nu. 8M – 12M')">
-              <span>📹 Watch Video</span>
+          <div class="farm-info-body">
+            <h3 class="farm-prop-title">Organic Apple Farm &ndash; Paro</h3>
+            <div class="farm-prop-specs">15 Acres | Clean Mountain Spring Water</div>
+            <div class="farm-prop-price">Price: Nu. 8M &ndash; 12M</div>
+            <button type="button" class="btn-watch-farm-tour" onclick="openFarmTour('Organic Apple Farm', 'Paro Valley', '15 Acres (Mature Orchard)', 'Nu. 8M – 12M')">
+              📹 Watch Video Tour
             </button>
           </div>
         </article>
 
         <!-- Farm 2: Vegetable Farm Thimphu -->
         <article class="farm-listing-card">
-          <div class="farm-image-cover">
-            <img src="assets/farm-2.jpg" alt="Vegetable Farm - Thimphu">
-            <button type="button" class="farm-play-circle" onclick="openFarmTour('Commercial Vegetable Farm', 'North Thimphu', '8 Acres', 'Nu. 5M – 8M')">▶</button>
+          <div class="farm-media-frame">
+            <img src="assets/farm-2.jpg" alt="Vegetable Farm Thimphu">
+            <div class="farm-play-center" onclick="openFarmTour('Vegetable Farm', 'North Thimphu', '8 Acres (Greenhouse Fitted)', 'Nu. 5M – 8M')">▶</div>
           </div>
-          <div class="farm-card-content">
-            <h3 class="farm-listing-title">Vegetable Farm &ndash; Thimphu</h3>
-            <div class="farm-acreage-price">8 Acres | Price: Nu. 5M &ndash; 8M</div>
-            <button type="button" class="btn-watch-farm-video" onclick="openFarmTour('Commercial Vegetable Farm', 'North Thimphu', '8 Acres', 'Nu. 5M – 8M')">
-              <span>📹 Watch Video</span>
+          <div class="farm-info-body">
+            <h3 class="farm-prop-title">Vegetable Farm &ndash; Thimphu</h3>
+            <div class="farm-prop-specs">8 Acres | Commercial Greenhouses</div>
+            <div class="farm-prop-price">Price: Nu. 5M &ndash; 8M</div>
+            <button type="button" class="btn-watch-farm-tour" onclick="openFarmTour('Vegetable Farm', 'North Thimphu', '8 Acres (Greenhouse Fitted)', 'Nu. 5M – 8M')">
+              📹 Watch Video Tour
             </button>
           </div>
         </article>
 
         <!-- Farm 3: Dairy Farm Punakha -->
         <article class="farm-listing-card">
-          <div class="farm-image-cover">
-            <img src="assets/farm-3.jpg" alt="Dairy Farm - Punakha">
-            <button type="button" class="farm-play-circle" onclick="openFarmTour('Sub-tropical Dairy Farm', 'Punakha Valley', '20 Acres', 'Nu. 12M – 18M')">▶</button>
+          <div class="farm-media-frame">
+            <img src="assets/farm-3.jpg" alt="Dairy Farm Punakha">
+            <div class="farm-play-center" onclick="openFarmTour('Dairy Farm', 'Punakha Valley', '20 Acres (Pasture & Sheds)', 'Nu. 12M – 18M')">▶</div>
           </div>
-          <div class="farm-card-content">
-            <h3 class="farm-listing-title">Dairy Farm &ndash; Punakha</h3>
-            <div class="farm-acreage-price">20 Acres | Price: Nu. 12M &ndash; 18M</div>
-            <button type="button" class="btn-watch-farm-video" onclick="openFarmTour('Sub-tropical Dairy Farm', 'Punakha Valley', '20 Acres', 'Nu. 12M – 18M')">
-              <span>📹 Watch Video</span>
+          <div class="farm-info-body">
+            <h3 class="farm-prop-title">Dairy Farm &ndash; Punakha</h3>
+            <div class="farm-prop-specs">20 Acres | Road Access &amp; Power</div>
+            <div class="farm-prop-price">Price: Nu. 12M &ndash; 18M</div>
+            <button type="button" class="btn-watch-farm-tour" onclick="openFarmTour('Dairy Farm', 'Punakha Valley', '20 Acres (Pasture & Sheds)', 'Nu. 12M – 18M')">
+              📹 Watch Video Tour
             </button>
           </div>
         </article>
 
         <!-- Farm 4: Mixed Farm Wangdue -->
         <article class="farm-listing-card">
-          <div class="farm-image-cover">
-            <img src="assets/farm-4.jpg" alt="Mixed Farm - Wangdue">
-            <button type="button" class="farm-play-circle" onclick="openFarmTour('Himalayan Mixed Farm', 'Wangdue Phodrang', '12 Acres', 'Nu. 7M – 11M')">▶</button>
+          <div class="farm-media-frame">
+            <img src="assets/farm-4.jpg" alt="Mixed Farm Wangdue">
+            <div class="farm-play-center" onclick="openFarmTour('Mixed Farm', 'Wangdue Phodrang', '12 Acres (Fully Fenced)', 'Nu. 7M – 11M')">▶</div>
           </div>
-          <div class="farm-card-content">
-            <h3 class="farm-listing-title">Mixed Farm &ndash; Wangdue</h3>
-            <div class="farm-acreage-price">12 Acres | Price: Nu. 7M &ndash; 11M</div>
-            <button type="button" class="btn-watch-farm-video" onclick="openFarmTour('Himalayan Mixed Farm', 'Wangdue Phodrang', '12 Acres', 'Nu. 7M – 11M')">
-              <span>📹 Watch Video</span>
+          <div class="farm-info-body">
+            <h3 class="farm-prop-title">Mixed Farm &ndash; Wangdue</h3>
+            <div class="farm-prop-specs">12 Acres | Fully Fenced &amp; Terraced</div>
+            <div class="farm-prop-price">Price: Nu. 7M &ndash; 11M</div>
+            <button type="button" class="btn-watch-farm-tour" onclick="openFarmTour('Mixed Farm', 'Wangdue Phodrang', '12 Acres (Fully Fenced)', 'Nu. 7M – 11M')">
+              📹 Watch Video Tour
             </button>
           </div>
         </article>
 
-        <!-- Green Promo Card: Your Dream Farm in Bhutan Awaits -->
-        <div class="dream-farm-promo-box" style="grid-column: span 2;">
+        <!-- Right Highlight Promo Box (EXACT AS HOMEPAGE) -->
+        <div class="farm-promo-highlight-box">
           <div>
-            <div class="dream-farm-title">Your Dream Farm in Bhutan Awaits</div>
-            <div class="dream-checklist-item">
-              <span class="dream-check-icon">✓</span>
-              <span>Verified NLCS Lagthram Properties</span>
-            </div>
-            <div class="dream-checklist-item">
-              <span class="dream-check-icon">✓</span>
-              <span>4K Drone Video Tour Available</span>
-            </div>
-            <div class="dream-checklist-item">
-              <span class="dream-check-icon">✓</span>
-              <span>Trusted Legal &amp; Agronomist Brokerage Service</span>
-            </div>
+            <h3 class="farm-promo-title">Your Dream Farm in Bhutan Awaits</h3>
+            <ul class="farm-promo-checklist">
+              <li>✓ Verified Properties &amp; Land Deeds</li>
+              <li>✓ High-Definition Aerial Video Tours</li>
+              <li>✓ End-to-End Legal Escrow Brokerage</li>
+            </ul>
           </div>
-          <button type="button" class="btn-enquire-now" style="margin-top:16px;" onclick="document.getElementById('enquireFormModal').showModal()">
-            Enquire Now &rarr;
+          <button type="button" class="btn-enquire-farm-now" onclick="openFarmTour('Farmland Consultation', 'Thimphu / Paro / Punakha / Wangdue', 'Custom Acreage', 'Upon Request')">
+            Enquire Now
           </button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- MAIN FOOTER -->
-  <footer class="mart-main-footer">
+  <!-- FARMLAND BROKERAGE ADVANTAGES -->
+  <section style="background: #ffffff; padding: 50px 0 60px; border-top: 1px solid #e2e8f0;">
     <div class="container">
-      <div class="mart-footer-top-grid">
-        <div class="footer-col-brand">
-          <img src="assets/logo.jpg" alt="Bhutan Global Mart Logo" class="footer-brand-logo">
-          <div class="footer-brand-slogan">Global Products &bull; Local Support</div>
+      <div style="text-align: center; max-width: 650px; margin: 0 auto 35px;">
+        <span class="subpage-mart-tagline" style="color: #15803d;">Guaranteed Compliance</span>
+        <h2 style="font-size: 1.8rem; font-weight: 900; color: #0f172a; margin-top: 6px;">How Our Land Brokerage Works</h2>
+        <p style="font-size: 0.9rem; color: #64748b; margin-top: 6px;">We protect both landowner and buyer under strict Bhutanese land tenure regulations.</p>
+      </div>
+
+      <div class="partner-showcase-grid">
+        <div class="partner-box-card">
+          <div class="partner-icon-large">📜</div>
+          <h3 class="partner-box-title">Thram Title Search</h3>
+          <p class="partner-box-desc">Every listing is verified with the Land Commission to ensure zero encumbrances, court disputes or mortgage liens.</p>
+        </div>
+        <div class="partner-box-card">
+          <div class="partner-icon-large">🚁</div>
+          <h3 class="partner-box-title">Drone Land Mapping</h3>
+          <p class="partner-box-desc">Inspect boundary stones, solar exposure, stream flow and road connectivity through 4K aerial recordings.</p>
+        </div>
+        <div class="partner-box-card">
+          <div class="partner-icon-large">⚖️</div>
+          <h3 class="partner-box-title">Legal Conveyance</h3>
+          <p class="partner-box-desc">Drafting of official sale deeds and lease contracts by registered Bhutanese advocates with bank escrow protection.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (EXACT AS HOMEPAGE) -->
+  <footer class="mart-footer-section">
+    <div class="container">
+      <div class="mart-footer-columns">
+        <div>
+          <img src="assets/footer-logo.jpg" alt="Bhutan Global Mart Footer Logo" style="height:36px; margin-bottom:10px;">
+          <p style="font-size:0.78rem; color:#94a3b8; line-height:1.5;">
+            Global Products &bull; Local Support. Connecting Bhutan directly with factories and distribution centers worldwide.
+          </p>
         </div>
 
-        <div class="footer-col-links">
-          <h4 class="footer-col-heading">Quick Links</h4>
-          <ul class="footer-links-list">
+        <div>
+          <h4 class="mart-footer-title">Quick Links</h4>
+          <ul class="mart-footer-links-list">
             <li><a href="index.html">Home</a></li>
-            <li><a href="shop.html">Shop</a></li>
+            <li><a href="shop.html">Shop Catalog</a></li>
+            <li><a href="about.html">About Us</a></li>
             <li><a href="farm-brokerage.html">Farm Brokerage</a></li>
-            <li><a href="index.html#featuredProducts">Featured Products</a></li>
-            <li><a href="index.html#videos">Product Videos</a></li>
+            <li><a href="faq.html">FAQ &amp; Help</a></li>
           </ul>
         </div>
 
-        <div class="footer-col-links">
-          <h4 class="footer-col-heading">Customer Service</h4>
-          <ul class="footer-links-list">
-            <li><a href="#">Track Order</a></li>
-            <li><a href="#">Shipping Policy</a></li>
-            <li><a href="#">Return &amp; Refund</a></li>
-            <li><a href="#">Terms &amp; Conditions</a></li>
-            <li><a href="#">Privacy Policy</a></li>
+        <div>
+          <h4 class="mart-footer-title">Customer Service</h4>
+          <ul class="mart-footer-links-list">
+            <li><a href="contact.html">Track Order &amp; Support</a></li>
+            <li><a href="faq.html#shipping">Shipping to Bhutan</a></li>
+            <li><a href="faq.html#returns">Return &amp; Refund</a></li>
+            <li><a href="contact.html">Contact Office</a></li>
+            <li><a href="faq.html">Wholesale Terms</a></li>
           </ul>
         </div>
 
-        <div class="footer-col-contact">
-          <h4 class="footer-col-heading">Contact Us</h4>
-          <div class="footer-contact-row">
-            <span>📞</span>
-            <span>+975 17 123456 / 17654321</span>
-          </div>
-          <div class="footer-contact-row">
-            <span>✉️</span>
-            <span>info@bhutanglobalmart.bt</span>
-          </div>
-          <div class="footer-contact-row">
-            <span>📍</span>
-            <span>Thimphu, Bhutan</span>
-          </div>
-        </div>
-
-        <div class="footer-col-payment">
-          <h4 class="footer-col-heading">We Accept</h4>
-          <div class="payment-logos-badge-row">
-            <span class="pay-tag visa">VISA</span>
-            <span class="pay-tag mc">MasterCard</span>
-            <span class="pay-tag paypal">PayPal</span>
-            <span class="pay-tag stripe">stripe</span>
-          </div>
-          <div class="support-local-motto">
-            <span style="font-size:1.1rem; color:#f59e0b;">🏔️</span>
-            <span>Support Local &bull; Grow Global</span>
+        <div>
+          <h4 class="mart-footer-title">Contact Us</h4>
+          <ul class="mart-footer-links-list">
+            <li>📞 +975 17 123456 / 17654321</li>
+            <li>✉️ info@bhutanglobalmart.bt</li>
+            <li>📍 Thimphu, Bhutan</li>
+          </ul>
+          <div style="margin-top:12px;">
+            <span style="font-size:0.7rem; color:#94a3b8; display:block; margin-bottom:4px;">We Accept:</span>
+            <div style="display:flex; gap:6px; font-size:0.7rem; font-weight:800; color:#0f172a;">
+              <span style="background:#fff; padding:2px 6px; border-radius:2px;">VISA</span>
+              <span style="background:#fff; padding:2px 6px; border-radius:2px;">MasterCard</span>
+              <span style="background:#fff; padding:2px 6px; border-radius:2px;">PayPal</span>
+              <span style="background:#fff; padding:2px 6px; border-radius:2px;">Stripe</span>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="mart-footer-bottom-strip">
-        <p>&copy; 2026 Bhutan Global Mart. All rights reserved. | A Bhutanese Company Connecting You to the World.</p>
-        <p class="dzongkha-text">འབྲུག་གི་ མདུན་ལམ་ནང་འདྲེན་ཡོངས་འབྲེལ།</p>
+      <div class="mart-footer-bottom-line">
+        <div>&copy; 2026 Bhutan Global Mart. All rights reserved. | A Bhutanese Company Connecting You to the World.</div>
+        <div class="dzongkha-footer-script">གཉུག་མའི་ མཛངས་ཤེས་དྲེ་ལས་བྱུང་།</div>
       </div>
     </div>
   </footer>
 
-  <!-- NATIVE MODAL: VIDEO TOUR -->
-  <dialog id="farmVideoModal" aria-labelledby="farmVideoModalTitle" style="padding:0; border:none; border-radius:14px; max-width:680px; width:90%; background:#07192d; color:#fff; box-shadow:0 20px 40px rgba(0,0,0,0.4);">
-    <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 20px; background:#0d2847; border-bottom:1px solid rgba(255,255,255,0.1);">
-      <span id="farmVideoModalTitle" style="font-weight:800; font-size:1rem; color:#f5a623;">Farm Video Tour &amp; Survey</span>
-      <button type="button" onclick="document.getElementById('farmVideoModal').close()" style="background:none; border:none; color:#fff; font-size:1.3rem; cursor:pointer;">✕</button>
+  <!-- NATIVE FARM TOUR MODAL (EXACT FROM HOMEPAGE) -->
+  <dialog id="farmModal" aria-labelledby="farmModalTitle">
+    <div style="background:#15803d; color:#fff; padding:12px 18px; display:flex; justify-content:space-between; align-items:center;">
+      <span id="farmModalTitle" style="font-weight:700; font-size:0.95rem;">Farmland Virtual Inspection</span>
+      <button type="button" data-close-modal="farmModal" style="background:none; border:none; color:#fff; font-size:1.2rem; cursor:pointer;">✕</button>
     </div>
-    <div style="padding:24px;">
-      <div style="background:#000; border-radius:10px; height:280px; display:flex; flex-direction:column; align-items:center; justify-content:center; margin-bottom:16px;">
-        <span style="font-size:3rem; margin-bottom:8px;">🚁</span>
-        <div id="farmTourTitleText" style="font-size:1.1rem; font-weight:800; color:#fff;">Organic Apple Farm - Paro Valley</div>
-        <div id="farmTourMetaText" style="font-size:0.85rem; color:#94a3b8; margin-top:4px;">15 Acres | Price: Nu. 8M – 12M</div>
-      </div>
-      <p style="font-size:0.85rem; color:#cbd5e1; line-height:1.5; margin-bottom:16px;">
-        High-definition drone footage recording soil profile, mountain irrigation canals, boundary pillars, and road connectivity.
-      </p>
-      <button type="button" class="btn-enquire-now" style="width:100%; text-align:center;" onclick="document.getElementById('farmVideoModal').close(); document.getElementById('enquireFormModal').showModal();">
-        Request Deed of Sale / On-Site Visit
-      </button>
-    </div>
-  </dialog>
-
-  <!-- NATIVE MODAL: ENQUIRE FORM -->
-  <dialog id="enquireFormModal" aria-labelledby="enquireFormModalTitle" style="padding:0; border:none; border-radius:14px; max-width:500px; width:90%; background:#fff; color:#0f172a; box-shadow:0 20px 40px rgba(0,0,0,0.3);">
-    <div style="display:flex; justify-content:space-between; align-items:center; padding:16px 20px; background:#166534; color:#fff;">
-      <span id="enquireFormModalTitle" style="font-weight:800; font-size:1rem;">Enquire Bhutan Farmland</span>
-      <button type="button" onclick="document.getElementById('enquireFormModal').close()" style="background:none; border:none; color:#fff; font-size:1.3rem; cursor:pointer;">✕</button>
-    </div>
-    <div style="padding:22px;">
-      <form onsubmit="event.preventDefault(); alert('Inquiry submitted! Our Bhutan Land Brokerage representative will contact you within 24 hours.'); document.getElementById('enquireFormModal').close();">
-        <div style="margin-bottom:12px;">
-          <input type="text" placeholder="Full Name" class="form-field-input" style="padding-left:12px; width:100%;" required>
-        </div>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:12px;">
-          <input type="tel" placeholder="Phone Number" class="form-field-input" style="padding-left:12px; width:100%;" required>
-          <input type="email" placeholder="Email Address" class="form-field-input" style="padding-left:12px; width:100%;" required>
-        </div>
-        <div style="margin-bottom:14px;">
-          <select class="form-field-select" style="padding-left:12px; width:100%;" required>
-            <option value="Organic Apple Farm - Paro">Organic Apple Farm - Paro (15 Acres)</option>
-            <option value="Vegetable Farm - Thimphu">Vegetable Farm - Thimphu (8 Acres)</option>
-            <option value="Dairy Farm - Punakha">Dairy Farm - Punakha (20 Acres)</option>
-            <option value="Mixed Farm - Wangdue">Mixed Farm - Wangdue (12 Acres)</option>
-            <option value="General Land Search">General Land Search / Custom Requirement</option>
-          </select>
-        </div>
-        <button type="submit" class="btn-enquire-now" style="width:100%; padding:12px; font-size:0.95rem;">
-          Submit Land Purchase Inquiry
-        </button>
-      </form>
+    <div style="padding:20px;">
+      <div id="farmModalContent"></div>
     </div>
   </dialog>
 
   <script src="js/main.js"></script>
-  <script>
-    function openFarmTour(name, location, acres, price) {
-      document.getElementById('farmTourTitleText').innerText = `${name} – ${location}`;
-      document.getElementById('farmTourMetaText').innerText = `${acres} | Price: ${price}`;
-      document.getElementById('farmVideoModal').showModal();
-    }
-  </script>
 </body>
 </html>
