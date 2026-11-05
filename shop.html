@@ -233,154 +233,142 @@
           <div class="products-cards-row" id="featuredGrid">
             <!-- 1. Wireless Earbuds -->
             <article class="product-item-card" data-category="Electronics" data-platform="Amazon" data-price="8.50" data-moq="50">
-              <span class="badge-corner-new">New</span>
-              <button type="button" class="wishlist-btn-heart" onclick="toggleWishlist(this, 'Wireless Earbuds')" title="Add to Wishlist">🤍</button>
-              <div class="prod-thumbnail-box">
-                <img src="assets/prod-1.jpg" alt="Wireless Earbuds">
+              <div class="product-img-box">
+                <img src="assets/prod-earbuds.jpg" alt="Wireless Earbuds">
+                <span class="product-ribbon-tag new">New</span>
+                <button type="button" class="btn-item-wishlist" aria-label="Add to Wishlist">🤍</button>
               </div>
-              <div class="prod-details-body">
-                <h3 class="prod-name-title">Wireless Earbuds</h3>
-                <div class="prod-rating-row">
-                  <span class="rating-stars">★ 4.8</span>
-                  <span class="rating-count">(2.3k)</span>
+              <div class="product-details-box">
+                <h3 class="prod-item-name">Wireless Earbuds</h3>
+                <div class="prod-rating-line">
+                  <span class="rating-star-yellow">★ 4.8</span>
+                  <span>(2.3k)</span>
                 </div>
                 <div class="prod-moq-spec">MOQ: 50 pcs</div>
-                <div class="prod-price-tier" data-usd-min="8.50" data-usd-max="11.20">$8.50 &ndash; $11.20 <span class="per-unit-text">/pc</span></div>
-                <div class="prod-tags-row">
-                  <span class="tag-platform-pill amazon">Amazon</span>
-                  <span class="tag-category-pill">Electronics</span>
+                <div class="prod-price-range">
+                  <span data-base-price="8.50">$8.50</span> &ndash; <span data-base-price="11.20">$11.20</span> <span style="font-size:0.7rem; color:#64748b; font-weight:normal;">/pc</span>
                 </div>
-                <button type="button" class="btn-add-to-cart-action" onclick="addToCart('Wireless Earbuds', 8.50, 'assets/prod-1.jpg', 50)">
-                  <span>Add to Wholesale Cart</span>
-                  <span>+</span>
-                </button>
+                <div class="prod-source-actions-row">
+                  <span class="source-pill-label amazon">Amazon</span>
+                  <button type="button" class="btn-add-cart-mini" onclick="addToCartDirect('Wireless Earbuds', 8.50, 'assets/prod-earbuds.jpg')">+ Cart</button>
+                </div>
               </div>
             </article>
 
             <!-- 2. Smart Watch -->
             <article class="product-item-card" data-category="Electronics" data-platform="Alibaba" data-price="15.00" data-moq="20">
-              <span class="badge-corner-best">Best Seller</span>
-              <button type="button" class="wishlist-btn-heart" onclick="toggleWishlist(this, 'Smart Watch')" title="Add to Wishlist">🤍</button>
-              <div class="prod-thumbnail-box">
-                <img src="assets/prod-2.jpg" alt="Smart Watch">
+              <div class="product-img-box">
+                <img src="assets/prod-watch.jpg" alt="Smart Watch">
+                <span class="product-ribbon-tag bestseller">Best Seller</span>
+                <button type="button" class="btn-item-wishlist" aria-label="Add to Wishlist">🤍</button>
               </div>
-              <div class="prod-details-body">
-                <h3 class="prod-name-title">Smart Watch</h3>
-                <div class="prod-rating-row">
-                  <span class="rating-stars">★ 4.7</span>
-                  <span class="rating-count">(1.8k)</span>
+              <div class="product-details-box">
+                <h3 class="prod-item-name">Smart Watch</h3>
+                <div class="prod-rating-line">
+                  <span class="rating-star-yellow">★ 4.7</span>
+                  <span>(1.8k)</span>
                 </div>
                 <div class="prod-moq-spec">MOQ: 20 pcs</div>
-                <div class="prod-price-tier" data-usd-min="15.00" data-usd-max="22.00">$15.00 &ndash; $22.00 <span class="per-unit-text">/pc</span></div>
-                <div class="prod-tags-row">
-                  <span class="tag-platform-pill alibaba">Alibaba</span>
-                  <span class="tag-category-pill">Electronics</span>
+                <div class="prod-price-range">
+                  <span data-base-price="15.00">$15.00</span> &ndash; <span data-base-price="22.00">$22.00</span> <span style="font-size:0.7rem; color:#64748b; font-weight:normal;">/pc</span>
                 </div>
-                <button type="button" class="btn-add-to-cart-action" onclick="addToCart('Smart Watch', 15.00, 'assets/prod-2.jpg', 20)">
-                  <span>Add to Wholesale Cart</span>
-                  <span>+</span>
-                </button>
+                <div class="prod-source-actions-row">
+                  <span class="source-pill-label alibaba">Alibaba</span>
+                  <button type="button" class="btn-add-cart-mini" onclick="addToCartDirect('Smart Watch Pro', 15.00, 'assets/prod-watch.jpg')">+ Cart</button>
+                </div>
               </div>
             </article>
 
             <!-- 3. Winter Jacket -->
             <article class="product-item-card" data-category="Fashion" data-platform="AliExpress" data-price="12.00" data-moq="50">
-              <span class="badge-corner-hot">Hot</span>
-              <button type="button" class="wishlist-btn-heart" onclick="toggleWishlist(this, 'Winter Jacket')" title="Add to Wishlist">🤍</button>
-              <div class="prod-thumbnail-box">
-                <img src="assets/prod-3.jpg" alt="Winter Jacket">
+              <div class="product-img-box">
+                <img src="assets/prod-jacket.jpg" alt="Winter Jacket">
+                <span class="product-ribbon-tag hot">Hot</span>
+                <button type="button" class="btn-item-wishlist" aria-label="Add to Wishlist">🤍</button>
               </div>
-              <div class="prod-details-body">
-                <h3 class="prod-name-title">Winter Jacket</h3>
-                <div class="prod-rating-row">
-                  <span class="rating-stars">★ 4.6</span>
-                  <span class="rating-count">(1.2k)</span>
+              <div class="product-details-box">
+                <h3 class="prod-item-name">Winter Jacket</h3>
+                <div class="prod-rating-line">
+                  <span class="rating-star-yellow">★ 4.6</span>
+                  <span>(1.2k)</span>
                 </div>
                 <div class="prod-moq-spec">MOQ: 50 pcs</div>
-                <div class="prod-price-tier" data-usd-min="12.00" data-usd-max="18.00">$12.00 &ndash; $18.00 <span class="per-unit-text">/pc</span></div>
-                <div class="prod-tags-row">
-                  <span class="tag-platform-pill aliexpress">AliExpress</span>
-                  <span class="tag-category-pill">Fashion</span>
+                <div class="prod-price-range">
+                  <span data-base-price="12.00">$12.00</span> &ndash; <span data-base-price="18.00">$18.00</span> <span style="font-size:0.7rem; color:#64748b; font-weight:normal;">/pc</span>
                 </div>
-                <button type="button" class="btn-add-to-cart-action" onclick="addToCart('Winter Jacket', 12.00, 'assets/prod-3.jpg', 50)">
-                  <span>Add to Wholesale Cart</span>
-                  <span>+</span>
-                </button>
+                <div class="prod-source-actions-row">
+                  <span class="source-pill-label aliexpress">AliExpress</span>
+                  <button type="button" class="btn-add-cart-mini" onclick="addToCartDirect('Winter Thermal Jacket', 12.00, 'assets/prod-jacket.jpg')">+ Cart</button>
+                </div>
               </div>
             </article>
 
             <!-- 4. Air Fryer -->
             <article class="product-item-card" data-category="Home" data-platform="Amazon" data-price="25.00" data-moq="10">
-              <button type="button" class="wishlist-btn-heart" onclick="toggleWishlist(this, 'Air Fryer')" title="Add to Wishlist">🤍</button>
-              <div class="prod-thumbnail-box">
-                <img src="assets/prod-4.jpg" alt="Air Fryer">
+              <div class="product-img-box">
+                <img src="assets/prod-airfryer.jpg" alt="Air Fryer">
+                <button type="button" class="btn-item-wishlist" aria-label="Add to Wishlist">🤍</button>
               </div>
-              <div class="prod-details-body">
-                <h3 class="prod-name-title">Air Fryer</h3>
-                <div class="prod-rating-row">
-                  <span class="rating-stars">★ 4.9</span>
-                  <span class="rating-count">(980)</span>
+              <div class="product-details-box">
+                <h3 class="prod-item-name">Air Fryer</h3>
+                <div class="prod-rating-line">
+                  <span class="rating-star-yellow">★ 4.9</span>
+                  <span>(980)</span>
                 </div>
                 <div class="prod-moq-spec">MOQ: 10 pcs</div>
-                <div class="prod-price-tier" data-usd-min="25.00" data-usd-max="38.00">$25.00 &ndash; $38.00 <span class="per-unit-text">/pc</span></div>
-                <div class="prod-tags-row">
-                  <span class="tag-platform-pill amazon">Amazon</span>
-                  <span class="tag-category-pill">Home &amp; Kitchen</span>
+                <div class="prod-price-range">
+                  <span data-base-price="25.00">$25.00</span> &ndash; <span data-base-price="38.00">$38.00</span> <span style="font-size:0.7rem; color:#64748b; font-weight:normal;">/pc</span>
                 </div>
-                <button type="button" class="btn-add-to-cart-action" onclick="addToCart('Air Fryer', 25.00, 'assets/prod-4.jpg', 10)">
-                  <span>Add to Wholesale Cart</span>
-                  <span>+</span>
-                </button>
+                <div class="prod-source-actions-row">
+                  <span class="source-pill-label amazon">Amazon</span>
+                  <button type="button" class="btn-add-cart-mini" onclick="addToCartDirect('Digital Air Fryer', 25.00, 'assets/prod-airfryer.jpg')">+ Cart</button>
+                </div>
               </div>
             </article>
 
             <!-- 5. Travel Backpack -->
             <article class="product-item-card" data-category="Fashion" data-platform="Alibaba" data-price="10.00" data-moq="30">
-              <button type="button" class="wishlist-btn-heart" onclick="toggleWishlist(this, 'Travel Backpack')" title="Add to Wishlist">🤍</button>
-              <div class="prod-thumbnail-box">
-                <img src="assets/prod-5.jpg" alt="Travel Backpack">
+              <div class="product-img-box">
+                <img src="assets/prod-backpack.jpg" alt="Travel Backpack">
+                <button type="button" class="btn-item-wishlist" aria-label="Add to Wishlist">🤍</button>
               </div>
-              <div class="prod-details-body">
-                <h3 class="prod-name-title">Travel Backpack</h3>
-                <div class="prod-rating-row">
-                  <span class="rating-stars">★ 4.7</span>
-                  <span class="rating-count">(1.4k)</span>
+              <div class="product-details-box">
+                <h3 class="prod-item-name">Travel Backpack</h3>
+                <div class="prod-rating-line">
+                  <span class="rating-star-yellow">★ 4.7</span>
+                  <span>(1.4k)</span>
                 </div>
                 <div class="prod-moq-spec">MOQ: 30 pcs</div>
-                <div class="prod-price-tier" data-usd-min="10.00" data-usd-max="16.00">$10.00 &ndash; $16.00 <span class="per-unit-text">/pc</span></div>
-                <div class="prod-tags-row">
-                  <span class="tag-platform-pill alibaba">Alibaba</span>
-                  <span class="tag-category-pill">Bags &amp; Luggage</span>
+                <div class="prod-price-range">
+                  <span data-base-price="10.00">$10.00</span> &ndash; <span data-base-price="16.00">$16.00</span> <span style="font-size:0.7rem; color:#64748b; font-weight:normal;">/pc</span>
                 </div>
-                <button type="button" class="btn-add-to-cart-action" onclick="addToCart('Travel Backpack', 10.00, 'assets/prod-5.jpg', 30)">
-                  <span>Add to Wholesale Cart</span>
-                  <span>+</span>
-                </button>
+                <div class="prod-source-actions-row">
+                  <span class="source-pill-label alibaba">Alibaba</span>
+                  <button type="button" class="btn-add-cart-mini" onclick="addToCartDirect('Travel Backpack', 10.00, 'assets/prod-backpack.jpg')">+ Cart</button>
+                </div>
               </div>
             </article>
 
             <!-- 6. LED Bulb (10 pcs) -->
             <article class="product-item-card" data-category="Home" data-platform="AliExpress" data-price="5.50" data-moq="100">
-              <button type="button" class="wishlist-btn-heart" onclick="toggleWishlist(this, 'LED Bulb Set')" title="Add to Wishlist">🤍</button>
-              <div class="prod-thumbnail-box">
-                <img src="assets/prod-6.jpg" alt="LED Bulb 10 pcs">
+              <div class="product-img-box">
+                <img src="assets/prod-led.jpg" alt="LED Bulb Pack">
+                <button type="button" class="btn-item-wishlist" aria-label="Add to Wishlist">🤍</button>
               </div>
-              <div class="prod-details-body">
-                <h3 class="prod-name-title">LED Bulb (10 pcs)</h3>
-                <div class="prod-rating-row">
-                  <span class="rating-stars">★ 4.8</span>
-                  <span class="rating-count">(760)</span>
+              <div class="product-details-box">
+                <h3 class="prod-item-name">LED Bulb (10 pcs)</h3>
+                <div class="prod-rating-line">
+                  <span class="rating-star-yellow">★ 4.8</span>
+                  <span>(760)</span>
                 </div>
                 <div class="prod-moq-spec">MOQ: 100 pcs</div>
-                <div class="prod-price-tier" data-usd-min="5.50" data-usd-max="8.00">$5.50 &ndash; $8.00 <span class="per-unit-text">/pc</span></div>
-                <div class="prod-tags-row">
-                  <span class="tag-platform-pill aliexpress">AliExpress</span>
-                  <span class="tag-category-pill">Home &amp; Living</span>
+                <div class="prod-price-range">
+                  <span data-base-price="5.50">$5.50</span> &ndash; <span data-base-price="8.00">$8.00</span> <span style="font-size:0.7rem; color:#64748b; font-weight:normal;">/pc</span>
                 </div>
-                <button type="button" class="btn-add-to-cart-action" onclick="addToCart('LED Bulb (10 pcs)', 5.50, 'assets/prod-6.jpg', 100)">
-                  <span>Add to Wholesale Cart</span>
-                  <span>+</span>
-                </button>
+                <div class="prod-source-actions-row">
+                  <span class="source-pill-label aliexpress">AliExpress</span>
+                  <button type="button" class="btn-add-cart-mini" onclick="addToCartDirect('LED Bulb 10 pcs', 5.50, 'assets/prod-led.jpg')">+ Cart</button>
+                </div>
               </div>
             </article>
           </div>

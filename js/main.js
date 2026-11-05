@@ -175,13 +175,13 @@ document.addEventListener('DOMContentLoaded', () => {
         1. <strong>Smart Watch Fitness Tracker</strong> ($15.00 /pc)<br>
         2. <strong>ANC Wireless Earbuds</strong> ($8.50 /pc)<br>
         3. <strong>Heavy Winter Goose-Down Parka</strong> ($12.00 /pc)<br>
-        <button style="margin-top:6px; background:#0284c7; color:#fff; border:none; padding:4px 10px; border-radius:4px; font-size:0.75rem; cursor:pointer;" onclick="addToCartDirect('Smart Watch Fitness Tracker', 15.00, 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=150&q=80')">+ Add Smart Watch to Cart</button>`;
+        <button style="margin-top:6px; background:#0284c7; color:#fff; border:none; padding:4px 10px; border-radius:4px; font-size:0.75rem; cursor:pointer;" onclick="addToCartDirect('Smart Watch Fitness Tracker', 15.00, 'assets/prod-watch.jpg')">+ Add Smart Watch to Cart</button>`;
       } else if (promptText.toLowerCase().includes('red jacket') || promptText.toLowerCase().includes('jacket')) {
         botReply = `Found 1 matching item in AliExpress Wholesale:<br>
         <strong>Waterproof Puffer Winter Jacket (Red, Size L)</strong><br>
         Price: <strong>$12.00 - $18.00 /pc</strong> (MOQ: 50 pcs)<br>
         Delivery to Thimphu / Phuentsholing: 5-7 business days.<br>
-        <button style="margin-top:6px; background:#16a34a; color:#fff; border:none; padding:4px 10px; border-radius:4px; font-size:0.75rem; cursor:pointer;" onclick="addToCartDirect('Waterproof Puffer Winter Jacket', 14.00, 'https://images.unsplash.com/photo-1544923246-77307dd654cb?auto=format&fit=crop&w=150&q=80')">Add 50 pcs to Quote</button>`;
+        <button style="margin-top:6px; background:#16a34a; color:#fff; border:none; padding:4px 10px; border-radius:4px; font-size:0.75rem; cursor:pointer;" onclick="addToCartDirect('Waterproof Puffer Winter Jacket', 14.00, 'assets/prod-jacket.jpg')">Add 50 pcs to Quote</button>`;
       } else if (promptText.toLowerCase().includes('under $20') || promptText.toLowerCase().includes('20')) {
         botReply = `Great budget picks under $20 from global hubs:<br>
         • High-Speed Air Fryer 3.5L ($25 promotional tier)<br>
